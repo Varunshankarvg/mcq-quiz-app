@@ -1,0 +1,80 @@
+Longest Increasing Subsequence (LIS) identifies the length of the longest subsequence in which each element is greater than the previous one.
+A subsequence does not require contiguous elements but must maintain the original order.
+In LIS, each new number in the sequence must be strictly greater than the one before it.
+The goal is to determine the maximum length possible under these conditions.
+For every element, potential subsequences ending at earlier elements must be checked.
+A dynamic programming approach stores intermediate results to build up to the final answer.
+Each index is initialized with the value 1, signifying that a single element itself is a valid subsequence.
+For each element at index i, previous indices j are checked where j < i.
+If the current element is greater than a previous one, and its LIS value is higher, we update.
+The DP array is updated to reflect the best LIS that can end at that index.
+The maximum value in the DP array after the process gives the LIS length.
+The time complexity of this solution is O(n²), where n is the length of the array.
+An optimization can be done using binary search, reducing the complexity to O(n log n).
+The optimized method maintains a temporary list representing the ends of LIS candidates.
+A binary search is used to find the position to replace or extend the temporary list.
+Although the actual sequence may not be preserved in the optimized list, its length is accurate.
+This list is not the LIS itself but helps in determining the length of LIS.
+In sorted arrays, the LIS is the array itself.
+In reverse-sorted arrays, the LIS is always 1.
+The LIS does not allow repeated elements unless they are strictly increasing.
+It is possible to reconstruct the LIS by storing predecessor indices during computation.
+LIS is a classic dynamic programming problem with overlapping subproblems.
+The problem exhibits optimal substructure since the solution can be built from smaller solutions.
+Recursive approaches can solve the problem, but they are inefficient without memoization.
+Memoization helps avoid recalculating solutions for the same subproblem.
+The difference between subsequences and substrings is crucial when working with LIS.
+Substrings require continuity, whereas subsequences do not.
+LIS can be adapted to work on sequences of characters or other comparable values.
+The problem extends to applications such as stock market trend analysis.
+LIS plays a role in measuring consistency and improvement over time.
+A variation includes finding not just the length but also the number of LIS paths.
+To do this, we track both the length and count for each element.
+When an equal LIS length is found, the count is incremented.
+The sum of all counts where LIS length equals the maximum gives the total LIS count.
+LIS has direct use in solving the patience sorting algorithm.
+Patience sorting is an efficient sorting method that mirrors the LIS logic.
+LIS is used in file comparison algorithms to identify longest matches.
+In genome analysis, LIS helps align gene sequences optimally.
+It is also used in tracking personal progress over time, such as weight or scores.
+LIS shows how far one can go with consistent improvement in values.
+The concept of LIS can be visualized using graph theory by forming a DAG (Directed Acyclic Graph).
+Each edge points from a smaller number to a larger number with a valid increasing connection.
+Finding LIS in such a graph is equivalent to finding the longest path.
+However, LIS is more efficiently solved using DP or binary search than with graphs.
+LIS is often used as a subroutine in more complex problems.
+It appears in competitive programming due to its versatility.
+LIS generalizes to multidimensional data like LIS in 2D arrays.
+LIS variants include Longest Bitonic Subsequence and Longest Decreasing Subsequence.
+Another variation includes finding LIS with constraints, like bounded difference.
+LIS appears in coding platforms such as LeetCode, Codeforces, and HackerRank.
+Binary search in LIS is used to find the correct position to insert or replace an element.
+This ensures that the temporary list is always in increasing order with minimal end values.
+The length of the temporary list remains accurate because it preserves increasing order.
+Replacing a value in the temporary list does not affect correctness.
+The temporary list represents the smallest possible ending values for subsequences.
+Multiple increasing subsequences can exist in an array, but LIS focuses only on the longest.
+In binary search-based LIS, duplicates are handled by ensuring strict comparison.
+Arrays with all identical values always yield LIS of 1.
+Negative values in the input sequence do not affect the working of the LIS algorithm.
+The algorithm remains applicable for any comparable data type.
+Dynamic programming allows for bottom-up tabulation of LIS.
+Tabulation helps avoid recursion stack overhead.
+The DP array can be visualized as a histogram of maximum subsequence lengths.
+Visual tools can aid in understanding how LIS evolves across positions.
+LIS is often taught early in DP curriculum for its foundational nature.
+Some implementations track both value and index for backtracking LIS sequence.
+Reconstructing the LIS requires keeping track of previous indices.
+Reconstruction is optional but useful in understanding actual sequences.
+LIS is similar to problems involving longest chain of events.
+Problems involving envelopes (like Russian Doll Envelopes) are LIS variants.
+LIS can be solved offline or online depending on how the input arrives.
+Online LIS requires data structures like segment trees or binary indexed trees.
+The problem can be extended to find LIS in circular arrays.
+Circular LIS needs careful handling of wrap-around comparisons.
+In LIS, the original input order must be preserved.
+LIS also helps in identifying stability in input patterns.
+Real-time systems can use LIS to detect sustained improvement trends.
+LIS is foundational in combinatorial optimization.
+Solving LIS builds understanding of greedy and DP hybrid solutions.
+Mastering LIS helps solve advanced algorithmic challenges.

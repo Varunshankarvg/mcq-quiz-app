@@ -1,0 +1,80 @@
+AVL Tree is a self-balancing binary search tree.
+In an AVL Tree, the height difference between left and right subtrees is at most one.
+The AVL Tree checks balance after every insertion and deletion.
+AVL Tree maintains balance using rotations.
+The height of an AVL Tree is kept at O(log n).
+AVL Tree gives fast search, insert, and delete operations.
+AVL Tree is named after its inventors Adelson-Velsky and Landis.
+Each node in an AVL Tree stores a balance factor.
+The balance factor in an AVL Tree is the height of the left subtree minus the right.
+AVL Tree is a type of balanced binary search tree.
+In AVL Tree, if balance factor becomes -2 or +2, the tree is unbalanced.
+AVL Tree uses right rotation to fix left-heavy unbalance.
+AVL Tree uses left rotation to fix right-heavy unbalance.
+AVL Tree uses left-right rotation for special left-right cases.
+AVL Tree uses right-left rotation for special right-left cases.
+AVL Tree gives better balance than normal binary search trees.
+AVL Tree avoids becoming a linked list.
+AVL Tree stores data in a sorted manner.
+AVL Tree keeps operations efficient by staying balanced.
+In AVL Tree, insertions might cause rotations.
+Deletions in AVL Tree may also cause rebalancing.
+AVL Tree allows no more than one level difference between subtrees.
+Searching in an AVL Tree is faster than in an unbalanced binary tree.
+The structure of AVL Tree changes after rotations.
+AVL Tree always ensures log height even after many insertions.
+AVL Tree helps maintain efficient data structure performance.
+AVL Tree is more complex than a simple binary search tree.
+Each operation in AVL Tree takes O(log n) time.
+AVL Tree uses recursive logic to check balance.
+AVL Tree is suitable when many searches are required.
+AVL Tree grows evenly due to balancing.
+In AVL Tree, leaf nodes are always at similar depths.
+AVL Tree prevents degradation of search time.
+AVL Tree performs better than skewed trees.
+Rotations in AVL Tree change the parent-child relationships.
+AVL Tree is used in memory indexing.
+AVL Tree improves CPU cache performance.
+AVL Tree helps in database searching.
+AVL Tree is good for large-scale lookups.
+AVL Tree is stable for frequent insertions and deletions.
+AVL Tree balances itself automatically.
+AVL Tree rotations preserve the binary search property.
+Balance factor in AVL Tree is -1, 0, or +1 for balanced nodes.
+An AVL Tree is empty if it has no nodes.
+A single node AVL Tree is already balanced.
+AVL Tree’s root changes after some rotations.
+AVL Tree’s height is minimum for a given number of nodes.
+AVL Tree helps prevent stack overflows in recursive search.
+AVL Tree supports range searches efficiently.
+AVL Tree ensures optimal performance for all basic operations.
+Inserted nodes in AVL Tree may become the new root.
+AVL Tree is balanced but more rigid than Red-Black Tree.
+AVL Tree requires rechecking balance up to the root.
+AVL Tree can be implemented with extra height field.
+AVL Tree provides a worst-case time of O(log n).
+AVL Tree maintains tighter balance than many other trees.
+AVL Tree avoids deep levels, saving memory in some cases.
+In AVL Tree, the left subtree has all smaller values.
+In AVL Tree, the right subtree has all greater values.
+AVL Tree does not allow duplicate values.
+The shape of AVL Tree is affected by insertion order.
+AVL Tree behaves predictably with ordered data.
+AVL Tree is a good choice for in-memory searching.
+AVL Tree works well in file systems for directory sorting.
+AVL Tree insertion is slightly slower than normal BST.
+AVL Tree deletion is more complex than insertion.
+AVL Tree's height can be calculated using recursion.
+AVL Tree’s balancing ensures even data access times.
+AVL Tree can become unbalanced after changes.
+AVL Tree supports both ascending and descending traversals.
+AVL Tree's structure helps in finding minimum or maximum fast.
+AVL Tree supports finding the floor and ceiling of a value.
+AVL Tree stores all elements in sorted order.
+AVL Tree ensures minimum path for search.
+AVL Tree can be used for ordered map implementations.
+AVL Tree can be combined with other data structures.
+AVL Tree's height increases only when needed.
+AVL Tree is reliable for time-sensitive applications.
+AVL Tree keeps system performance consistent
+AVL Tree is a powerful and self-regulating data structure.

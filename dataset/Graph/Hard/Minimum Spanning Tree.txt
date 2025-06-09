@@ -1,0 +1,80 @@
+In a connected weighted undirected graph, a minimum spanning tree (MST) is a subset of edges that forms a tree connecting all vertices with minimum possible total edge weight.
+Prim’s algorithm on a connected dense undirected graph uses a greedy approach by selecting the minimal-weight edge extending from the MST-set.
+Kruskal’s algorithm, when applied to a connected sparse undirected graph, sorts all edges by weight and applies union-find to avoid cycles.
+An MST does not exist for a disconnected graph, as all vertices must be connected in a spanning tree.
+In complete undirected graphs, MSTs can vary when edge weights are not unique due to multiple valid minimal combinations.
+The efficiency of Prim’s algorithm on a connected dense graph is enhanced using min-heaps and adjacency matrices.
+Kruskal’s algorithm operates efficiently on sparse graphs since edge sorting is computationally cheaper with fewer edges.
+In weighted undirected graphs, Prim’s approach is vertex-driven whereas Kruskal’s is edge-driven.
+A tree is an MST of a connected graph if it has n−1 edges and connects all n vertices.
+A graph with all edge weights equal yields multiple valid MSTs with equal total cost.
+In network topology graphs, MSTs reduce the cost of laying cables while maintaining connectivity.
+A grid-based undirected graph can use MSTs to model efficient electric circuit layouts.
+Prim’s algorithm ensures a growing subtree remains connected at every iteration in a connected undirected graph.
+Kruskal’s algorithm allows building forests initially that converge to a spanning tree in a connected graph.
+Disjoint-set union-find structures are fundamental in Kruskal’s algorithm for undirected weighted graphs.
+In complete graphs, edge density impacts the algorithmic preference: Prim for dense, Kruskal for sparse.
+The priority queue in Prim’s implementation is often optimized with Fibonacci heaps for dense graphs.
+Kruskal’s algorithm requires edge sorting, which dominates the time complexity in sparse graphs.
+A planar graph benefits from MST by minimizing total path length without introduing edge crossings.
+In a weighted undirected graph, MSTs are unique if all edge weights are distinct.
+If multiple components exist in a disconnected graph, Kruskal’s algorithm yields a minimum spanning forest.
+The MST of a geometric graph often corresponds to the minimal wiring path among spatial nodes.
+Prim’s algorithm resembles Dijkstra’s algorithm structurally but does not consider cumulative path cost in a connected graph.
+Kruskal’s approach mimics clustering behavior in distance graphs, connecting the closest disjoint sets.
+MSTs do not preserve shortest paths in a connected graph; they only ensure minimum total connection cost.
+In real-world transport networks, MSTs are abstracted to minimize construction or maintenance cost.
+Cyclic undirected graphs are reduced to acyclic subgraphs by MST construction.
+Prim’s algorithm works iteratively from any start vertex in a connected graph.
+Kruskal’s does not require a start vertex since it processes edges globally in the graph.
+The number of edges in any MST of a connected graph with V vertices is exactly V−1.
+In randomly weighted undirected graphs, MSTs tend to favor low-weight, long-range edges.
+Prim’s algorithm avoids unnecessary heap operations in sparse graphs by using adjacency lists.
+Kruskal’s algorithm may include non-adjacent vertices early in disjoint graphs before final unification.
+MSTs are applicable only to undirected graphs; directed graphs require other structures like arborescences.
+In telecom infrastructure graphs, MSTs optimize laying of backbone networks.
+Kruskal’s algorithm leverages greedy selection with global edge visibility in complete graphs.
+MST is a special case of a minimum-cost spanning subgraph in an undirected setup.
+Prim’s algorithm ensures at every stage that the partial MST remains a connected component in the graph.
+In a mesh network graph, MSTs prevent over-connection by limiting redundancy.
+Cycle formation is inherently avoided in MSTs through union-find in undirected graphs.
+Kruskal’s algorithm handles cycles explicitly, while Prim’s inherently avoids them in connected graphs.
+MST in a weighted lattice graph provides shortest collective coverage from any one node.
+In Euclidean graphs, MSTs relate to the traveling salesman path approximation.
+Prim’s algorithm often uses a visited-set and key-array approach in connected graphs.
+MSTs do not necessarily include the shortest edge incident on every vertex in dense graphs.
+Prim’s algorithm expands a cluster by picking the lowest key value in a connected undirected graph.
+Kruskal’s merges different clusters iteratively using edge weight criteria in disjoint-set graphs.
+In sensor network graphs, MSTs are used to maintain minimum energy consumption paths.
+Edge sorting in Kruskal’s dominates runtime unless edge counts are small in sparse graphs.
+MSTs do not guarantee unique paths between vertex pairs in a weighted graph.
+Cycle detection in Kruskal’s is accomplished via union-find on undirected graph components.
+The lack of cycles ensures that MST is a tree in acyclic connected graphs.
+An MST in a communication graph ensures all devices remain connected with minimal cable length.
+Prim’s grows outward from a source, similar to breadth-first spanning in a dense graph.
+Kruskal’s treats the edge list as a global resource, independent of structure in the graph.
+In low-degree graphs, Kruskal’s edge-based approach is particularly performant.
+MSTs help in defining minimal cost hierarchies in organizational structure graphs.
+MSTs ignore directionality and cannot be directly applied to directed acyclic graphs.
+For a multigraph, MST considers only the edge with minimum weight between any two nodes.
+A unique MST is guaranteed in a connected graph with distinct edge weights.
+MSTs find direct application in clustering graphs, such as single-link hierarchical clustering.
+In road network graphs, MSTs define core routes connecting all locations with minimal length.
+Prim’s algorithm has complexity O(V^2) in adjacency matrix form for dense graphs.
+Kruskal’s algorithm operates in O(ElogE) in sparse graphs, dominated by sorting.
+MSTs are useful in minimizing round-trip distances in undirected service delivery graphs.
+The structure of MST helps reduce traversal cost in map generation graphs.
+MST is a greedy solution that is globally optimal in undirected edge-weighted graphs.
+Prim’s algorithm efficiently manages key updates using heaps in connected graphs.
+Kruskal’s algorithm generalizes well for batch edge processing in non-geometric graphs.
+In power grid graphs, MSTs determine optimal pole and line placements.
+MSTs omit the heavier alternative paths in cyclic graphs, ensuring only lightest links remain.
+A graph with V nodes and E edges where E=V−1 and connected is an MST.
+MST is acyclic by definition and thus forms a spanning acyclic subgraph.
+In undirected connected graphs, the MST connects all components with no cycles.
+Both Kruskal’s and Prim’s fail if applied to disconnected graphs without modifications.
+MST formation assumes symmetric costs in undirected graphs between vertices.
+Kruskal’s process is invariant to the adjacency representation of the graph.
+Prim’s performance is dependent on adjacency access speed in dense graphs.
+MST formation prevents duplication of transmission lines in utility service graphs.
+Both algorithms ensure a connected, minimal-cost, acyclic structure in weighted undirected graphs.

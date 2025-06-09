@@ -1,0 +1,80 @@
+A binary tree is a tree data structure where each node has at most two children.
+A binary tree consists of a root node, left subtree, and right subtree.
+In a binary tree, each node can have zero, one, or two children.
+A complete binary tree is filled from left to right without gaps.
+A full binary tree is one where every node has either 0 or 2 children.
+A perfect binary tree is both full and complete.
+The root node is the topmost node in a binary tree.
+The height of a binary tree is the number of edges on the longest path from root to a leaf.
+A leaf node in a binary tree has no children.
+Internal nodes in a binary tree have at least one child.
+In a balanced binary tree, the height difference between left and right subtrees is minimal.
+Binary trees are used to represent hierarchical data.
+Binary trees can be traversed in inorder, preorder, and postorder.
+In inorder traversal of a binary tree, the left node is visited before the root and then the right node.
+Preorder traversal of a binary tree visits the root first, then the left, then the right subtree.
+Postorder traversal of a binary tree visits left and right children before the root.
+Binary trees are often used in expression evaluation.
+In a binary tree, each edge connects a parent to its child.
+A binary tree with only left children forms a linear structure like a linked list.
+A binary tree with only right children also looks like a list.
+Binary trees are recursive in nature.
+Each node in a binary tree stores data and pointers to its children.
+A degenerate binary tree is where each parent has only one child.
+Binary trees can be used to store sorted data for quick search.
+Binary trees support insertion and deletion operations.
+In a full binary tree, the total number of leaf nodes is always one more than the internal nodes.
+A binary tree can be implemented using classes or structures.
+The number of nodes in a perfect binary tree is 2^h - 1, where h is the height.
+A perfect binary tree has all leaves at the same level.
+In a complete binary tree, the last level may not be full.
+Binary trees can be represented using arrays.
+Binary trees are important for constructing heaps.
+Expression trees are a type of binary tree used in compilers.
+Binary trees allow efficient traversal of data.
+A balanced binary tree avoids skewed growth on one side.
+Binary trees are used to create decision-making algorithms.
+The depth of a node in a binary tree is the number of edges from the root.
+Binary trees are a fundamental structure in computer science.
+Binary trees are used in search algorithms.
+Binary trees can be mirrored by swapping left and right subtrees.
+A skewed binary tree has all children on one side.
+Binary trees make recursive programming simpler.
+Binary trees can be used in Huffman encoding.
+Binary trees support level order traversal using queues.
+Binary trees can be visualized in a pyramid-like structure.
+Binary trees help represent parse trees in natural language processing.
+Binary trees are easy to understand and implement.
+Each node in a binary tree can act as the root of its subtree.
+Binary trees help solve many divide and conquer problems.
+Binary trees can be converted into other types of trees.
+Balanced binary trees ensure operations remain efficient.
+Binary trees have a time complexity of O(n) for traversal.
+The height of a balanced binary tree is approximately log(n).
+Binary trees are helpful in managing hierarchical filesystems.
+Binary trees store relationships between parent and children.
+Binary trees can be navigated using recursive or iterative methods.
+A perfect binary tree is highly symmetric.
+Binary trees can store data in sorted or unsorted form.
+Binary trees have many variations used in different applications.
+Binary trees can be created from traversal arrays.
+Binary trees support ancestor and descendant relationships.
+Binary trees can be visualized with nodes connected by edges.
+Binary trees often appear in interview problems.
+Binary trees provide a flexible data structure for many tasks.
+Binary trees make it easy to perform binary operations.
+Binary trees are also known as ordered trees with two branches.
+Binary trees are common in syntax trees for programming languages.
+Binary trees are used to manage hierarchical menu systems.
+Binary trees can represent decision-making paths.
+A binary tree with no nodes is considered empty.
+Binary trees are a type of hierarchical data model.
+Binary trees simplify certain types of mathematical problems.
+A binary tree can be used in games for AI decision making.
+Binary trees help compress data using tree-based encoding.
+Binary trees are core to many sorting and searching algorithms.
+Binary trees can be balanced or unbalanced.
+Binary trees are a building block for binary search trees.
+Binary trees support serialization and deserialization.
+Binary trees are used in many backend algorithms of software.
+Binary trees provide a powerful way to organize structured data.

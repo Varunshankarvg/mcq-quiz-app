@@ -1,0 +1,80 @@
+LIS is the longest subsequence where elements increase.
+A subsequence can skip elements but keeps order.
+All elements in the LIS must be in increasing order.
+The LIS must be as long as possible.
+Each number is compared with earlier numbers.
+If a number is larger, it can extend the sequence.
+Start by storing 1 for each position.
+One element alone is an increasing subsequence.
+Compare each element with all before it.
+If it’s greater, update the maximum length.
+Track the longest length found so far.
+Use an array to store lengths of sequences.
+The answer is the maximum in this array.
+The order of numbers is important.
+You cannot rearrange the input.
+Duplicate numbers do not increase the LIS.
+A single repeating number gives LIS of 1.
+A sorted array has LIS equal to its length.
+A reverse sorted array has LIS of 1.
+You can use nested loops to find LIS.
+Every number has a chance to start a new sequence.
+You compare current number with previous ones.
+Only increasing numbers help build LIS.
+Store the best possible LIS at each index.
+Continue updating this while going through the array.
+The final answer is the biggest stored value.
+The array may contain negative numbers.
+The logic remains the same for negatives.
+You can track the actual sequence too.
+Store the index of previous elements to rebuild it.
+LIS has optimal substructure property.
+LIS also has overlapping subproblems.
+Dynamic programming is a good way to solve it.
+Time complexity using dynamic programming is O(n²).
+There is also a better method using binary search.
+The binary search method runs in O(n log n).
+You build a new list to store increasing numbers.
+Replace larger numbers to keep the list increasing.
+That list does not give the exact sequence.
+But its length gives the LIS length.
+LIS can be applied to strings as well.
+Convert letters to ASCII to compare them.
+LIS is useful in data analysis.
+It can find trends in stock prices.
+It can show student progress over time.
+LIS is used in version control systems.
+It helps compare differences in files.
+LIS can help in patience sorting.
+Patience sorting is a card game technique.
+LIS has real-world importance in machine learning.
+LIS can be solved using recursion.
+But recursion without memory is slow.
+Memoization speeds up the recursion.
+Dynamic programming avoids repeated work.
+Space optimization can reduce memory usage.
+1D arrays are enough to store LIS lengths.
+Binary search is applied on the helper list.
+Lower bound finds where to replace elements.
+It ensures the list remains increasing.
+Replacement does not affect final length.
+You can find the number of LIS too.
+Count how many ways each length appears.
+Use an extra array for counting.
+Update counts when lengths match.
+Combine counts for equal-length paths.
+The LIS may have many valid answers.
+The LIS must always preserve input order.
+Random access helps in implementation.
+LIS can be visualized using graphs.
+LIS length is always between 1 and n.
+If all elements are the same, LIS is 1.
+LIS does not allow decreasing numbers.
+Even if one number decreases, it breaks the LIS.
+Two LIS of same length can start at different points.
+Elements skipped in LIS can be any value.
+But skipped values must not affect the order.
+The problem is a classic in dynamic programming.
+LIS is often asked in coding interviews.
+Practicing LIS helps improve problem-solving skills.
+Understanding LIS helps in other sequence problems.

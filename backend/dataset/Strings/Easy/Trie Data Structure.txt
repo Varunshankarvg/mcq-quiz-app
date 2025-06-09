@@ -1,0 +1,80 @@
+A Trie is a tree-like data structure.
+It is used to store a dynamic set of strings.
+Each node in a Trie represents a character.
+A path from the root to a node represents a prefix.
+Tries are mainly used for efficient retrieval of strings.
+They are especially useful for dictionary-related problems.
+Each level of a Trie represents one character of a word.
+The root node is usually empty or null.
+Children of each node store possible next characters.
+Trie is also known as a prefix tree.
+It can quickly check if a word is present.
+It can also find if a prefix exists in the dataset.
+Tries are faster than hash maps for prefix matching.
+In a Trie, there are no duplicate nodes for common prefixes.
+Words with common prefixes share paths in the Trie.
+Insertion in Trie is done character by character.
+Searching is also done character by character.
+Trie nodes usually contain an array or map of children.
+Each node may have a flag to mark the end of a word.
+This flag is called an end-of-word marker.
+Trie supports three basic operations: insert, search, and delete.
+Tries are case-sensitive unless modified.
+They work best with strings from a known character set.
+English alphabet Tries typically use 26 child references per node.
+Tries can also handle numbers or Unicode characters.
+Tries take more space than hash tables.
+But they offer faster search for prefix-based queries.
+They are commonly used in autocomplete systems.
+Tries can be used for spell checking.
+They are also used in IP routing (Longest Prefix Matching).
+Tries can answer prefix queries in O(m) time.
+Here, m is the length of the word or prefix.
+Time complexity of insert and search is also O(m).
+Tries can store millions of strings efficiently.
+Memory usage depends on word length and branching.
+Deletion in Trie requires careful handling of nodes.
+Unused nodes should be removed during deletion.
+Trie nodes can be represented using linked lists or arrays.
+Arrays are faster but take more space.
+Maps are space-efficient but slower.
+A Trie can be modified to return all words with a given prefix.
+This helps in applications like search suggestions.
+Tries are not limited to alphabets only.
+They can store any kind of string data.
+Trie traversal is like tree traversal with strings.
+Depth-first traversal helps in listing stored words.
+Tries support lexicographical sorting naturally.
+Trie avoids hash collisions, unlike hash maps.
+Words stored in Tries are automatically sorted by structure.
+Tries can be compressed to reduce space.
+A compressed Trie is called a Radix Tree or Patricia Trie.
+In compressed Tries, chains of single-child nodes are merged.
+Tries can be implemented recursively or iteratively.
+Recursive implementations are easier to understand.
+Iterative ones are more memory-efficient.
+Trie-based autocomplete works by traversing to a prefix node.
+Then it gathers all words from that node onward.
+Tries are commonly used in search engines.
+They help speed up keyword lookup.
+Tries are used in T9 predictive text systems.
+They are also used in word games and puzzles.
+Tries can detect prefixes of malicious URLs in security tools.
+Tries can store large dictionaries efficiently.
+Word suggestions based on prefixes use Trie traversal.
+Tries can store words of different lengths easily.
+You can count how many words start with a given prefix using Tries.
+Tries make prefix counting operations fast.
+Tries are excellent for scenarios with large prefix overlap.
+They support batch insertions of strings.
+Tries provide a good balance of time and space in many use cases.
+Tries allow efficient wildcard searching in some cases.
+With small modifications, Tries can support regular expression matching.
+Tries are deterministic; the same input always leads to the same path.
+Tries are scalable and can be distributed.
+Each node can track how many words pass through it.
+This helps in counting and ranking search suggestions.
+Tries are powerful for linguistic and NLP tasks.
+They are a backbone for many auto-correction systems.
+Learning Tries strengthens understanding of trees and strings.
+Tries are one of the most practical data structures in text processing.

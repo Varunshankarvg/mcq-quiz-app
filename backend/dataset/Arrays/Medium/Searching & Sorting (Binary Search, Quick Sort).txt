@@ -1,0 +1,113 @@
+Merge Sort is a divide-and-conquer algorithm that splits the list into halves, recursively sorts them, and then merges the sorted halves back together.​
+Use Cases of Merge Sort are Large datasets where stability is required.​
+Time Complexity for Merge Sort is O(n log n) for all cases.​
+Merge sort is a divide-and-conquer algorithm that divides the array into halves until single elements remain.
+Merge sort recursively splits the array, sorts each half, and merges them back in sorted order.
+Merge sort has a consistent time complexity of O(n log n) in all cases (best, average, and worst).
+Merge sort is not an in-place sorting algorithm, requiring O(n) extra space for merging.
+Merge sort is stable, preserving the relative order of equal elements.
+Merge sort is suitable for large datasets where consistent performance is needed.
+Merge sort uses the merging process to combine two sorted arrays into a single sorted array.
+Merge sort follows a top-down approach, where the problem is broken down from the largest to the smallest subproblems.
+Merge sort is often preferred in external sorting, such as sorting large files stored in external memory.
+Merge sort handles linked lists efficiently because merging is more optimal with linked structures.
+Merge sort maintains performance consistency regardless of the initial order of elements.
+Merge sort is used in programming libraries and frameworks due to its reliable performance.
+
+Heap sort converts the list into a binary heap structure, then repeatedly extracts the maximum element and reconstructs the heap.​
+Use Cases of Heap sort includes situations requiring in-place sorting without recursion.​
+Time Complexity of Heap sort is O(n log n) for all cases.​
+Heap sort is a comparison-based sorting technique based on the binary heap data structure.
+Heap sort builds a max-heap or min-heap from the input data before sorting.
+Heap sort repeatedly extracts the maximum (or minimum) element from the heap and places it at the end of the array.
+Heap sort has a time complexity of O(n log n) for all cases: best, average, and worst.
+Heap sort is not a stable sorting algorithm, as it may change the relative order of equal elements.
+Heap sort performs sorting in-place, requiring only a constant amount O(1) of extra space.
+Heap sort starts by creating a heap from the input array using a heapify process.
+Heap sort converts the array into a max-heap, where the largest element is always at the root.
+Heap sort swaps the root with the last element and then re-heapifies the reduced heap.
+Heap sort is efficient for large datasets but may not be ideal when stability is required.
+Heap sort does not adapt to existing order in the data, unlike some adaptive sorting algorithms.
+Heap sort is often used in systems where memory usage must be minimal and predictable.
+
+Jump Search searches in a sorted array by jumping ahead by fixed steps and then performing a linear search within the block where the target may be.​
+Use Cases of Jump Search is that it is efficient for large, sorted arrays.​
+Time Complexity of Jump Search is O(√n).​
+Jump Search is an algorithm designed for searching in sorted arrays.
+The main idea behind Jump Search is to check elements at fixed intervals or "jumps" instead of every element.
+Jump Search finds the block where the target element could reside and then performs a linear search within that block.
+For optimal performance, the jump size in Jump Search is typically the square root of the array's length.
+Jump Search has a time complexity of O(√n) in the worst-case scenario.
+Jump Search is faster than linear search but not as efficient as binary search for large datasets.
+Jump Search requires the input array to be sorted before it can be applied.
+Jump Search is particularly useful when random access is allowed and the dataset size is large.
+Space complexity of Jump Search is O(1), making it memory-efficient.
+Jump Search reduces the number of comparisons compared to linear search, especially in long arrays.
+
+Interpolation Search is an improvement over binary search for uniformly distributed data; estimates the position of the target value based on the values at the ends of the search interval.​
+Use Cases of Interpolation Search is that it can be used in large, uniformly distributed datasets.​
+Time Complexity of Interpolation Search is O(log log n) in favorable cases; O(n) in the worst case.
+Interpolation Search works efficiently when elements in a sorted array are uniformly distributed.
+The core concept of Interpolation Search involves estimating the position of the target based on the values of the first and last elements.
+In Interpolation Search, the probe position is calculated using a formula derived from linear interpolation.
+Unlike binary search, Interpolation Search does not always look at the middle element.
+Interpolation Search offers an average-case time complexity of O(log log n) when the data is evenly distributed.
+In the worst case, Interpolation Search can degrade to O(n), especially with non-uniformly distributed data.
+Interpolation Search is faster than binary search for datasets with a predictable distribution.
+The input array for Interpolation Search must be sorted in ascending order.
+Interpolation Search is highly efficient when searching through large datasets with numeric, uniformly spread values.
+Interpolation Search requires constant space, resulting in a space complexity of O(1).
+
+Binary Search efficiently locates a target value within a sorted array by repeatedly dividing the search interval in half.​
+Use Cases of Binary Search are Large, sorted datasets.​
+Time Complexity of Binary Search is O(log n).​
+Binary search is a fast algorithm used to find an element in a sorted array.
+It works by repeatedly dividing the array into halves and checking the middle element.
+In Binary search if the middle element is equal to the target, the search ends successfully.
+In Binary search if the middle element is smaller, the search moves to the right half of the array.
+In Binary search if the middle element is larger, the search continues in the left half of the array.
+Binary search requires the array to be sorted before performing the search.
+The time complexity of binary search is O(log n) in the worst case.
+The Binary search algorithm reduces the search space by half in each step, making it very efficient.
+Binary search works on both increasing and decreasing sorted arrays.
+If an array is unsorted, binary search will not work correctly.
+The search process stops when the left and right pointers cross each other.
+Binary search is commonly used in database lookups and dictionary applications.
+Binary search can be implemented using both iterative and recursive approaches.
+In Binary search the iterative approach uses a while loop to narrow down the search range.
+In Binary search he recursive approach calls the function repeatedly, reducing the search space each time.
+In the worst case, binary search requires at most log₂(n) comparisons.
+Searching in a large dataset is much faster with binary search than with linear search.
+The midpoint calculationin Binary search is done using (low + high) / 2.
+in Binary search if the search space reduces to zero, the element is not present in the array.
+Binary search is not useful for unsorted or dynamic data that frequently changes.
+The Binary search algorithm is often used in sorted lists, search engines, and data retrieval applications.
+A variation of binary search is used in searching 2D matrices where each row is sorted.
+Binary search can be modified to find the first or last occurrence of a duplicate element.
+Binary search is also used to find the square root of a number efficiently.
+In a game leaderboard, binary search can quickly find a player’s rank.
+
+Quick Sort is a divide-and-conquer algorithm used for sorting an array.
+Quick Sort works by selecting a pivot element and partitioning the array around it.
+Elements smaller than the pivot move to the left, while larger elements move to the right.
+Quick Sort has an average-case time complexity of O(n log n).
+Quick Sort is faster than Bubble Sort and Insertion Sort for large datasets.
+The worst-case of Quick Sort occurs when the smallest or largest element is chosen as the pivot.
+Quick Sort works best when the pivot is chosen optimally, such as using the median-of-three method.
+In Quick Sort the sorting process continues until all elements are sorted relative to the pivot.
+Quick Sort is not stable, meaning it does not preserve the order of duplicate elements.
+The partitioning step in Quick Sort ensures that the pivot is placed in its correct final position.
+Quick Sort is used in search engines, databases, and file sorting applications.
+Unlike Merge Sort, Quick Sort does not require extra space for merging.
+If the pivot divides the array evenly, Quick Sort performs efficiently.
+The best-case scenario in Quick Sort happens when the pivot splits the array into equal halves.
+Randomized Quick Sort selects a random pivot to reduce the chance of the worst case.
+Quick Sort can be implemented using both recursion and iterative methods.
+The recursive method of Quick Sort is more commonly used but can lead to stack overflow if not optimized.
+The in-place nature of Quick Sort makes it useful for memory-efficient sorting.
+Quick Sort is widely used in sorting large datasets due to its efficiency.
+The partitioning process is the most important step in Quick Sort.
+Quick Sort has an expected time complexity of O(n log n) for randomly shuffled data.
+The choice of pivot affects the performance, with random pivots reducing worst-case scenarios.
+Quick Sort is preferred for applications where fast sorting is required, such as data analytics.
+Quick Sort is a widely used sorting algorithm because of its efficiency and adaptability.

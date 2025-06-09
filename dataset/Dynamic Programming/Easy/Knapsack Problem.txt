@@ -1,0 +1,80 @@
+The Knapsack Problem can be modeled as a DAG where each node represents a state of item index and capacity.
+In this DAG, each node connects to the next state with or without including the current item.
+The graph is directed because transitions go only forward from one item to the next.
+It is acyclic because no state loops back to a previous item or capacity in the DAG.
+Each path in the DAG represents a sequence of decisions for including or skipping items.
+The DAG starts at the initial state where no item is considered and the knapsack is empty.
+Edges in the DAG represent decisions like “include the item” or “exclude the item.”
+Each state in the DAG is defined by the current item index and remaining capacity.
+The DAG ensures that each transition leads to a valid subproblem.
+Each decision adds a directed edge in the DAG to a new state.
+The base case in the DAG is the state with no items or zero capacity.
+Leaf nodes in the DAG represent complete decision paths.
+The goal is to find the path in the DAG that gives the maximum total value.
+A node in the DAG stores the best value that can be obtained from that state.
+In 0/1 Knapsack, each item is considered only once, forming a layered DAG.
+The number of layers in the DAG equals the number of items.
+Within each layer of the DAG, different capacities form separate nodes.
+The DAG grows with both the number of items and the maximum capacity.
+Skipping an item means moving to the next layer in the DAG with the same capacity.
+Including an item moves to the next layer with reduced capacity in the DAG.
+The structure of the DAG allows dynamic programming to reuse previously computed results.
+Each node in the DAG gets its value from the maximum of its two incoming transitions.
+A top-down recursive solution navigates the DAG from the root to leaves.
+A bottom-up DP table traverses the DAG from leaves to the root.
+The solution is stored at the root node of the DAG that represents the full problem.
+Memoization in the top-down approach avoids re-visiting the same DAG nodes.
+Bottom-up DP fills the DAG layer by layer for all capacities.
+The 2D DP table corresponds to a matrix view of the DAG.
+In the 0/1 version, the DAG has two outgoing edges per item: take or skip.
+The total number of nodes in the DAG is proportional to items times capacity.
+The DAG does not contain cycles because no node points back to a previous state.
+The edges in the DAG represent possible moves in the decision space.
+Each path in the DAG represents a different subset of selected items.
+Nodes in the DAG accumulate values based on selected items’ weights and profits.
+In fractional knapsack, graph structure is not used, but 0/1 knapsack uses a DAG.
+The DAG allows tracking decisions that lead to the maximum value.
+Backtracking the DAG from the final node shows which items are selected.
+In the bounded knapsack, each item may be selected multiple times, changing the DAG structure.
+Unbounded knapsack creates a DAG where nodes loop forward within the same item index.
+The unbounded DAG has more edges due to repeated item usage.
+The DAG helps visualize all subproblems in the knapsack.
+Each state in the DAG is unique and represents a precise subproblem.
+No state in the DAG depends on a future item, keeping it acyclic.
+Optimal substructure is visible in the DAG as best solutions come from smaller problems.
+Each node in the DAG is connected only to the next item index.
+The maximum value path in the DAG represents the best item combination.
+The final answer is found at the starting node after solving the whole DAG.
+Overlapping subproblems are seen in the DAG when multiple paths reach the same state.
+The graph size can be reduced using space optimization in the DAG.
+The DAG is highly structured, making dynamic programming efficient.
+The greedy approach does not apply to the 0/1 DAG.
+The weight constraint restricts edge movement in the DAG.
+Each transition in the DAG checks whether the item can be added based on weight.
+Edges in the DAG do not carry weights but represent a choice.
+The value is stored at nodes, not along edges, in the DAG.
+A BFS traversal of the DAG is inefficient due to state explosion.
+The DP table is the most efficient way to represent the DAG.
+Each state only depends on the previous layer in the DAG.
+In unbounded knapsack, some states in the DAG may be revisited through different paths.
+Repetition of subproblems is minimized using memoization in the DAG.
+Edge pruning in the DAG is done when capacity is exceeded.
+The DAG encodes all feasible decisions in the problem.
+The DAG ensures decisions are ordered and constraints are respected.
+The solution trace in the DAG shows the included items.
+The DAG starts with zero capacity and no items used.
+The DAG terminates at all possible final states after all items.
+The best among all final states gives the optimal solution in the DAG.
+The DAG is flattened into a table for iterative solutions.
+The recursive tree can be converted into a DAG using memoization.
+This transition from tree to DAG avoids recomputation.
+Visualizing the DAG helps understand item choices.
+Every node in the DAG has only two parents in the 0/1 version.
+The DAG allows analyzing trade-offs between value and weight.
+Value accumulation happens only at nodes in the DAG.
+Skipping the item leads to horizontal movement in the DAG.
+Including the item causes a vertical and diagonal move in the DAG.
+The DAG captures complete solution space for the problem.
+Space-optimized DP reduces the DAG to one row.
+The structure of the DAG allows time complexity of O(nW).
+Solving the Knapsack Problem is about efficiently traversing the DAG of choices.

@@ -1,0 +1,105 @@
+Exponential Search finds the range where the target value may reside by doubling the index exponentially, then performs binary search within that range.​
+Use Cases of Exponential Search is that it can be used in unbounded or infinite-sized lists.​
+Time Complexity of Exponential Search is O(log n).​
+Exponential Search is an algorithm designed for searching elements in a sorted array.
+The primary goal of Exponential Search is to find the range where the target element may exist before applying binary search.
+Exponential Search begins by checking the first element of the array.
+After checking the first element, Exponential Search increases the index exponentially (i.e., 2⁰, 2¹, 2², ...) until the value at that index exceeds or matches the target or crosses the array length.
+Once a suitable range is identified using exponential steps, Exponential Search switches to binary search within that range.
+Exponential Search is highly efficient for unbounded or infinite-sized arrays where the length is unknown or very large.
+The time complexity of Exponential Search is O(log i), where i is the index at which the target is found or the upper bound of the range.
+The binary search component in Exponential Search contributes O(log i) complexity, making the entire process logarithmic.
+Exponential Search is ideal for cases where elements are located near the beginning of a sorted array.
+Exponential Search assumes that the array is sorted in ascending order.
+Exponential Search can be used in systems where memory access patterns are optimized for sequential access.
+Compared to binary search, Exponential Search is better at quickly narrowing down the probable region in large datasets.
+Exponential Search is also known as exponential binary search due to its two-step nature: exponential range finding followed by binary search.
+Exponential Search requires O(1) space, making it an in-place algorithm.
+Exponential Search performs best when the position of the element is closer to the beginning of the array.
+
+Ternary Search is similar to binary search but divides the search interval into three parts, determining which third contains the target.​
+Use Cases of Ternary Search is finding the minimum or maximum of a unimodal function.​
+Time Complexity of Ternary Search is O(log₃ n).​
+Ternary Search is a divide and conquer algorithm used to find the maximum or minimum of a unimodal function or to search for an element in a sorted array.
+In Ternary Search, the array (or range) is divided into three parts instead of two, unlike Binary Search.
+In Ternary Search, the process involves selecting two midpoints: mid1 and mid2 such that the range is divided into three equal parts.
+Ternary Search compares the target value with the values at mid1 and mid2.
+If the target is equal to the value at mid1 or mid2, Ternary Search returns the index immediately.
+If the target is less than the value at mid1, Ternary Search continues the search in the left third of the array.
+If the target is greater than the value at mid2, Ternary Search continues in the right third of the array.
+If the target is between the values at mid1 and mid2, Ternary Search narrows the search to the middle third.
+Ternary Search repeats this process recursively or iteratively until the element is found or the range becomes invalid.
+Ternary Search is mainly useful for unimodal functions where a single peak or trough exists.
+Ternary Search has a time complexity of O(log₃ n), which is slightly slower than Binary Search’s O(log₂ n), but useful in specific scenarios.
+In competitive programming and numerical analysis, Ternary Search is frequently used to find the maximum or minimum point of a unimodal function.
+Ternary Search assumes that the array or function is sorted or unimodal, depending on the application.
+Ternary Search is not commonly used in practical systems for basic searching tasks, where Binary Search is more efficient and straightforward.
+Ternary Search provides a mathematical approach for optimization problems, especially when used with floating-point ranges.
+Ternary Search requires O(1) space complexity, as the search is done in-place.
+Ternary Search can be implemented using either recursion or iteration depending on the design of the algorithm.
+
+Shell Sort is an optimization of insertion sort that allows the exchange of items that are far apart by sorting sublists at decreasing intervals.​
+Use Cases of Shell Sort is that it can be used for medium-sized datasets and performs better than insertion sort on large lists.​
+Time Complexity of Shell Sort varies depending on gap sequence; generally between O(n) and O(n²).​
+Shell Sort is an in-place comparison-based sorting algorithm that generalizes Insertion Sort to allow the exchange of items that are far apart.
+Shell Sort was introduced by Donald Shell in 1959 and is known for its efficiency with medium-sized datasets.
+Shell Sort improves the average-case performance of Insertion Sort by breaking the original list into smaller sublists using a gap sequence.
+In Shell Sort elements that are a certain gap apart are compared and swapped if they are out of order.
+Shell Sort reduces the gap value in each iteration until it becomes 1, at which point it behaves like a standard Insertion Sort.
+Shell Sort allows elements to move closer to their correct position in earlier passes, which reduces the amount of work needed in later stages.
+The performance of Shell Sort greatly depends on the choice of the gap sequence; common sequences include Knuth’s sequence, Tokuda’s sequence, and Ciura’s sequence.
+Shell Sort performs significantly better than Insertion Sort and Bubble Sort for moderately large arrays.
+Shell Sort has a best-case time complexity of O(n log n) with a good gap sequence, and a worst-case complexity that ranges between O(n²) and O(n^1.5), depending on the sequence used.
+Shell Sort does not require any additional memory, making the space complexity O(1).
+Shell Sort is not stable, as it can change the relative order of equal elements during the sorting process.
+Shell Sort is suitable for arrays with a large number of elements when memory usage is a concern.
+Shell Sort is less efficient than algorithms like Merge Sort, Heap Sort, or Quick Sort for large datasets but can outperform them in certain scenarios with optimized gap values.
+Shell Sort’s logic can be parallelized to some extent, improving performance on multicore processors.
+Shell Sort is easy to implement and adapt to different types of data, especially when performance and memory need to be balanced.
+Shell Sort can be seen as a compromise between the simplicity of quadratic sorts and the efficiency of more complex sorting algorithms.
+
+Radix Sort is a non-comparative sorting algorithm that processes individual digits of numbers, sorting them by each digit's place value.​
+Use Cases of Radix Sort is that it can be used for large datasets of integers or strings with fixed lengths.​
+Time Complexity of Radix Sort is O(nk), where k is the number of digits in the largest number.​
+Radix Sort is a non-comparative sorting algorithm that sorts data with integer keys by processing individual digits.
+Radix Sort processes digits from least significant digit (LSD) to most significant digit (MSD) or vice versa, depending on the variant used.
+In each pass of Radix Sort, elements are distributed into buckets based on the current digit and then collected in order.
+Radix Sort is particularly efficient for sorting large sets of numbers where the length of keys is bounded.
+Radix Sort uses a stable sorting algorithm (like Counting Sort) as a subroutine to sort elements based on individual digits.
+Radix Sort has a time complexity of O(nk), where n is the number of elements and k is the number of digits in th largest number.
+Radix Sort performs well when k is small relative to n, making it efficient for fixed-length integers or strings.
+Radix Sort does not make direct element comparisons, which allows it to outperform comparison-based algorithms in certain cases.
+Radix Sort is stable, preserving the relative order of records with equal keys during each digit pass.
+Radix Sort is suitable for sorting integers, strings, or any data that can be broken into individual digits or characters.
+Radix Sort can be adapted to work with different bases (e.g., base 10 for decimal, base 2 for binary), which affects performance and memory usage.
+Radix Sort requires additional space for temporary buckets, so the space complexity is O(n + k).
+Radix Sort works best when all keys have the same number of digits or when the maximum number of digits (k) is small.
+Radix Sort is commonly used in applications where data are uniformly distributed or when a bounded range of values is known in advance.
+Radix Sort may not be as cache-friendly as some other algorithms due to its use of auxiliary arrays and bucket structures.
+Radix Sort is often used in scenarios involving large datasets of integers such as phone numbers, ZIP codes, or IP addresses.
+Radix Sort ensures linear time performance for inputs with bounded digit length, making it superior to Quick Sort and Merge Sort in such cases.
+Radix Sort can be less efficient for datasets with highly variable digit lengths, especially if many passes are needed.
+Radix Sort is one of the fastest sorting algorithms for integer sorting when memory and input conditions are favorable.
+Radix Sort offers predictable performance and consistent timing, which is valuable in real-time or time-critical applications.
+
+Bucket Sort distributes elements into several 'buckets' and then sorts each bucket individually, often using another sorting algorithm.​
+Bucket Sort is a distribution-based sorting algorithm that divides the input elements into several groups called buckets.
+Each bucket in Bucket Sort is then sorted individually using another sorting algorithm, typically Insertion Sort.
+Bucket Sort is effective when input data is uniformly distributed over a range.
+The elements in each bucket are usually sorted and then concatenated to form the final sorted output.
+Bucket Sort works efficiently on floating-point numbers or uniformly distributed integers.
+The average-case time complexity of Bucket Sort is O(n + k), where n is the number of elements and k is the number of buckets.
+Bucket Sort has a best-case time complexity of O(n) when elements are evenly distributed and each bucket contains very few elements.
+The worst-case time complexity of Bucket Sort is O(n²) when all elements fall into a single bucket.
+Bucket Sort is stable if the sorting algorithm used within each bucket is stable.
+Bucket Sort requires additional space for the buckets, leading to a space complexity of O(n + k).
+Bucket Sort performs well when the range of input values is known and uniformly distributed.
+Bucket Sort can be used to sort values within a fixed range, such as grades between 0 and 100 or normalized data between 0 and 1.
+Bucket Sort is not comparison-based in its initial step; instead, it distributes elements into buckets based on a mapping function.
+Bucket Sort is sensitive to the choice of the number of buckets and the method used to distribute elements.
+Bucket Sort is less efficient for data with non-uniform distribution, as some buckets may end up with many elements while others remain empty.
+Bucket Sort is commonly used in scenarios like distribution of floating-point values, or sorting large datasets when parallel processing is possible.
+Bucket Sort may require tuning of parameters such as the number of buckets or the size of each bucket to achieve optimal performance.
+Bucket Sort's overall performance depends heavily on the quality of the hash or mapping function used to assign elements to buckets.
+Bucket Sort is often used in computer graphics and other areas where inputs naturally cluster within known ranges.
+Bucket Sort can be parallelized effectively by assigning each bucket to a separate processor or thread for individual sorting.

@@ -1,0 +1,80 @@
+An AVL Tree is a height-balanced variant of the Binary Search Tree.
+The AVL Tree enforces a strict balancing rule where the height difference between subtrees must not exceed 1.
+Each node in an AVL Tree maintains a balance factor to track the height difference.
+The balance factor of an AVL Tree node is calculated as the height of the left subtree minus the height of the right subtree.
+AVL Trees adjust themselves through tree rotations when the balance factor becomes +2 or -2.
+AVL Tree ensures logarithmic time complexity for insertion, deletion, and lookup operations.
+In AVL Trees, rebalancing is achieved using four types of rotations: left, right, left-right, and right-left.
+The AVL Tree's name originates from its inventors Adelson-Velsky and Landis.
+AVL Tree insertion may trigger a rebalancing process if the tree becomes imbalanced.
+Deleting a node in an AVL Tree might lead to multiple rebalancing operations up the tree.
+AVL Tree always maintains a near-optimal height of log₂(n), which is essential for fast access times.
+AVL Tree is a deterministic balanced BST, meaning its structure depends strictly on inserted values.
+AVL Tree’s balancing ensures that no skewed structure resembling a linked list is ever formed.
+The height-balancing property makes the AVL Tree highly efficient for repeated search operations.
+AVL Trees are preferred in systems where data modification frequency is high.
+Unlike simple binary trees, AVL Tree adjusts its shape dynamically.
+In AVL Tree, if a left subtree becomes two levels deeper than the right, a right rotation is performed.
+In AVL Tree, if a right subtree becomes two levels deeper than the left, a left rotation occurs.
+For complex imbalance, AVL Tree performs double rotations like left-right or right-left.
+AVL Tree is self-balancing, requiring no manual reordering of data.
+AVL Tree nodes store an extra integer for height or balance factor tracking.
+AVL Tree rebalancing may affect several ancestors of the inserted or deleted node.
+The rebalancing operations in an AVL Tree preserve the binary search property.
+AVL Trees offer better worst-case performance than unbalanced trees.
+In AVL Tree, the time to search, insert or delete remains consistent and predictable.
+The tree remains efficient even with millions of nodes due to its strict balance.
+AVL Tree rotations change parent-child relationships without breaking order.
+AVL Tree insertion operation is recursive and checks for balance bottom-up.
+AVL Tree is widely used in databases and file systems for ordered data storage.
+Each AVL Tree node ensures that its subtrees remain independently balanced.
+The tree’s structure is updated in-place through rotations, not by re-creating subtrees.
+AVL Tree is stricter in balance than Red-Black Trees, offering slightly faster lookups.
+A balance factor of ±2 indicates the need for AVL Tree rebalancing.
+AVL Trees never allow balance factors outside the range [-1, 1].
+In AVL Tree, the balance factor helps determine the required rotation type.
+AVL Trees may require cascading rotations after deletion.
+The left-right rotation in an AVL Tree involves a left rotation followed by a right rotation.
+The right-left rotation in an AVL Tree is the reverse: a right rotation followed by a left.
+AVL Tree offers consistent depth across all leaf nodes.
+The AVL Tree remains strictly balanced at all times during operations.
+AVL Tree guarantees logarithmic depth, minimizing the number of comparisons.
+A fully balanced AVL Tree with n nodes has a height of approximately 1.44 log₂(n).
+AVL Tree nodes are arranged in a way that supports in-order traversal.
+AVL Tree supports fast range queries using ordered traversal.
+AVL Tree allows finding minimum and maximum efficiently by following leftmost or rightmost nodes.
+The AVL Tree’s shape is sensitive to the order of insertions.
+A degenerate case in insertion may cause the AVL Tree to restructure completely.
+AVL Tree ensures that every node's subtree is also an AVL Tree.
+Rotations in an AVL Tree are constant time operations.
+AVL Tree enables lower variance in access time compared to an unbalanced BST.
+The recursive approach to insertion and deletion in AVL Tree ensures rebalancing is checked at each level.
+AVL Trees are more memory intensive due to height or balance factor storage.
+Rebalancing an AVL Tree never violates the binary search order.
+AVL Tree structure evolves over time to maintain balance with dynamic data.
+Each AVL Tree node logically partitions the data space into smaller ranges.
+AVL Tree enforces deterministic balancing rather than probabilistic.
+AVL Tree is effective when read-heavy operations dominate over writes.
+AVL Tree cannot tolerate long unbalanced paths as they reduce efficiency.
+AVL Tree performance doesn’t degrade over time, unlike plain binary trees.
+AVL Tree can be implemented using arrays or pointer-based structures.
+AVL Trees are used in compiler symbol tables and expression evaluation engines.
+AVL Trees prevent worst-case performance of O(n) in lookup by staying balanced.
+AVL Trees enable smooth deletion without losing order or balance.
+AVL Tree offers an excellent compromise between balance and operation cost.
+AVL Tree rotation logic is derived from subtree height comparison.
+Rebalancing steps in AVL Tree are transparent to end users.
+AVL Tree supports lazy updates when used in complex systems.
+AVL Tree root may change after successive insertions or deletions.
+AVL Tree can be used in event scheduling and gaming engines.
+In AVL Tree, subtree heights are recalculated after every change.
+AVL Tree stores distinct elements only, without duplicates.
+AVL Tree maintains order without needing external sorting.
+AVL Tree is ideal for indexing ordered elements in real-time systems.
+AVL Tree properties help prevent deep call stacks in recursive algorithms.
+The shape of an AVL Tree reflects balance more than content.
+AVL Tree serves as a building block in more advanced data structures.
+AVL Trees allow range-based partitioning in distributed systems.
+The AVL Tree minimizes node depth while preserving search invariants.
+AVL Trees respond dynamically to workload shifts in input patterns.
+The AVL Tree is a fundamental data structure in balanced search algorithms.

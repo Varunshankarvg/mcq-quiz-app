@@ -1,0 +1,16 @@
+Basic Concept
+Sliding Window is a technique for solving problems involving arrays or strings efficiently.
+Sliding Window uses a “window” that moves across the input to track data, such as a sum or frequency.
+Sliding Window technique helps reduce the time complexity from O(N²) to O(N).
+Windows can be of fixed or dynamic size.
+
+2. Common Problems
+Max Sum of Subarray (Size K): Slide the window and update the sum for each position.
+Min Sum of Subarray (Size K): Same as above but track the smallest sum.
+Count Subarrays with Given Sum: Slide and adjust the window to check for sum match.
+Longest Subarray with Equal 0s and 1s: Convert 0s to -1s and use a hashmap to track prefix sums.
+Longest Repeating Character Replacement: Expand the window and use frequency count to validate replacements.
+
+3. Time Complexity
+Most problems in Sliding Window can be solved in O(N) time.
+Brute-force solutions usually take much longer — O(N²) or more in Sliding Window.

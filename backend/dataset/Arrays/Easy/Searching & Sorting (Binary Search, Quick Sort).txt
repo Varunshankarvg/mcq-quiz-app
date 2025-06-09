@@ -1,0 +1,103 @@
+​Searching and sorting algorithms are fundamental components in computer science, enabling efficient data retrieval and organization.
+These algorithms range from basic techniques suitable for simple tasks to advanced methods designed for complex scenarios.
+Searching is the process of finding a specific element or value within a data structure like an array, list, or database.
+Searching algorithms are mainly categorized into linear and non-linear based on the traversal pattern.
+The goal of searching is to determine whether an element exists in a collection and, if it does, to find its position.
+Linear Search checks each element sequentially and is simple but inefficient for large datasets.
+Binary Search is efficient on sorted arrays and works by repeatedly dividing the search interval in half.
+Interpolation Search and Exponential Search are optimized versions of Binary Search for specific scenarios.
+Jump Search reduces the number of comparisons by checking fixed intervals and then performing linear search within the block.
+Ternary Search is an extension of Binary Search, splitting the array into three parts.
+Searching algorithms differ in their time complexity, with Linear Search being O(n), and Binary Search, Ternary Search being O(log n).
+The efficiency of a search operation depends on whether the data is sorted and the structure used (e.g., arrays, trees, hash tables).
+Searching is a fundamental operation in computing, used in applications like databases, information retrieval, and AI.
+
+Sorting is the process of arranging data in a particular order, typically ascending or descending.
+Sorting algorithms are classified as comparison-based (e.g., Bubble Sort, Merge Sort) and non-comparison-based (e.g., Radix Sort, Bucket Sort).
+Efficient sorting helps improve the performance of other algorithms like searching and merging.
+Bubble Sort and Selection Sort are simple but inefficient for large datasets due to their O(n²) time complexity.
+Merge Sort and Quick Sort are more efficient with average complexities of O(n log n).
+Insertion Sort performs well on small or nearly sorted datasets.
+Heap Sort uses a binary heap and provides consistent O(n log n) performance.
+Radix Sort and Bucket Sort are linear-time algorithms used for specific kinds of inputs like integers or floats.
+Shell Sort improves upon Insertion Sort by initially comparing elements far apart, reducing the gap over time.
+Stable sorting algorithms maintain the relative order of equal elements (e.g., Merge Sort, Bubble Sort).
+Unstable sorts like Quick Sort may change the order of equal elements unless modified.
+Sorting is crucial in algorithms like binary search, data analysis, report generation, and visualization.
+Space complexity is also a consideration; some sorting algorithms require extra memory (Merge Sort), while others are in-place (Quick Sort).
+Internal sorting happens in memory, while external sorting handles large datasets using disk or secondary storage.
+The choice of sorting algorithm depends on factors like data size, distribution, stability requirements, and available memory.
+Sorting is often a preprocessing step for optimization in large systems and real-time applications.
+
+Linear Search is a straightforward method that sequentially checks each element in a list until the target value is found or the list ends.​
+Use Cases of Linear Search is that it is effective for small or unsorted datasets.​
+Time Complexity of Linear Search is O(n), where n is the number of elements.​
+Linear search is a simple searching algorithm that checks each element of a list one by one.
+Linear search starts from the first element and moves sequentially through the list.
+Linear search compares each element with the target value.
+In Linear search if a match is found, the search stops, and the position of the element is returned.
+In Linear search if the end of the list is reached without finding the target, the search concludes that the element is not present.
+Linear search does not require the list to be sorted.
+Linear search works on both arrays and linked lists.
+Linear search is easy to implement and understand.
+Linear search is not efficient for large datasets because it checks every element.
+The worst-case time complexity of Linear search is O(n), where n is the number of elements.
+The best-case time complexity of Linear search is O(1), when the element is found at the beginning.
+The average-case time complexity of Linear search is O(n/2), simplified as O(n).
+Linear search has a space complexity of O(1), as it uses constant extra space.
+Linear search is suitable for small or unsorted datasets.
+Linear search is also called sequential search.
+
+
+Bubble Sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.​
+Use Cases of Bubble Sortis that it can be used in educational purposes and simple datasets.​
+Time Complexity of Bubble Sort is O(n²) in the worst case.​
+Bubble sort is a simple comparison-based sorting algorithm.
+Bubble sort repeatedly steps through the list and compares adjacent elements.
+Bubble sort swaps the elements if they are in the wrong order.
+Bubble sort continues the process until no more swaps are needed.
+Bubble sort ensures the largest element moves to the end in each pass.
+Bubble sort performs multiple passes over the list.
+Bubble sort has a worst-case time complexity of O(n²), where n is the number of elements.
+Bubble sort has a best-case time complexity of O(n) when the list is already sorted.
+Bubble sort has an average-case time complexity of O(n²).
+Bubble sort has a space complexity of O(1), as it sorts in-place.
+Bubble sort is easy to understand and implement.
+Bubble sort is inefficient for large datasets due to its high time complexity.
+Bubble sort is stable, meaning it preserves the order of equal elements.
+Bubble sort is suitable for educational purposes and small datasets.
+Bubble sort gets its name because smaller elements "bubble" to the top of the list.
+
+Selection Sort divides the list into a sorted and an unsorted region; repeatedly selects the smallest (or largest) element from the unsorted region and moves it to the sorted region.​
+Use Cases of Selection Sort is that it can be used in situations where memory writes are costly.​
+Time Complexity of Selection Sort is O(n²) in the worst case.
+Selection sort is a comparison-based sorting algorithm that divides the list into a sorted and an unsorted part.
+In each iteration, selection sort finds the minimum element from the unsorted part.
+The minimum element found by selection sort is then swapped with the first unsorted element.
+After each pass, selection sort increases the size of the sorted portion by one.
+Selection sort performs this process until the entire list becomes sorted.
+Selection sort has a time complexity of O(n²) in the best, average, and worst cases.
+Space complexity of selection sort is O(1) since it performs in-place sorting.
+Selection sort is not a stable algorithm because equal elements may not retain their relative order.
+Selection sort makes fewer swaps compared to bubble sort, which can be beneficial in certain situations.
+Selection sort is easy to understand and implement for beginners.
+Selection sort is inefficient on large datasets due to its quadratic time complexity.
+Selection sort always scans the entire unsorted part of the array to find the minimum element.
+Selection sort is mainly used in situations where memory writes are costly and the number of swaps needs to be minimized.​
+
+Insertion Sort builds the sorted list one element at a time by repeatedly picking the next element and inserting it into its correct position.​
+Use Cases of Insertion Sort is Small datasets or nearly sorted data.​
+Time Complexity is O(n²) in the worst case; O(n) when the list is already sorted.
+Insertion sort builds the final sorted array one element at a time.
+In each iteration, insertion sort removes one element from the input data and finds the correct position within the sorted part.
+Insertion sort shifts elements in the sorted part to make space for the new element.
+Insertion sort is efficient for small datasets and mostly sorted arrays.
+Insertion sort has a time complexity of O(n²) in the average and worst cases.
+The best-case time complexity of insertion sort is O(n) when the array is already sorted.
+Insertion sort performs sorting in-place with a space complexity of O(1).
+Insertion sort is a stable algorithm, meaning equal elements retain their relative order.
+Insertion sort is often used as a part of more complex algorithms like shell sort or tim sort.
+Insertion sort is simple to implement and easy to understand for learning purposes.
+Insertion sort is useful when dealing with real-time or streaming data where elements arrive continuously.
+Insertion sort compares the current element with elements in the sorted part from right to left.
+Insertion sort works well when the array is nearly sorted or has only a few elements out of place.

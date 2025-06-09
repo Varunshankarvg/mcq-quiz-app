@@ -1,0 +1,80 @@
+The LCS problem seeks the maximal subsequence common to two strings using a bottom-up approach in a Dynamic Programming Grid.
+Each cell (i, j) in the DP Grid encodes the LCS length of prefixes A[0...i-1] and B[0...j-1].
+The optimal substructure is exploited through recursive decomposition mapped onto a 2D DP Grid.
+In the DP Grid, matching characters prompt a diagonal increment, enforcing the LCS growth.
+Mismatched characters defer to the dominant sub-LCS length from the left or top cell in the DP Grid.
+The recurrence relation formalizes transitions across adjacent states in the DP Grid.
+Initialization of base cases in the DP Grid ensures valid lookups for zero-length string comparisons.
+Space complexity remains O(mn), but reductions to O(n) are possible by reusing rows in the DP Grid.
+The final LCS length emerges from the terminal cell in the DP Grid, representing total prefix coverage.
+The optimal LCS trace is retrieved via backward traversal along conditionally determined paths in the DP Grid.
+The DP Grid provides a memoized tabular representation of overlapping subproblems.
+The LCS problem also maps naturally to a recursive decision tree whose expansion forms a DAG.
+In the DAG, nodes represent subproblem states (i, j), and directed edges indicate allowed transitions.
+Each edge in the DAG reflects either character matching or bypassing a character from one string.
+The DAG grows exponentially in size without memoization, leading to combinatorial explosion.
+The number of unique subproblems in the DAG remains bounded by O(mn) with memoization.
+A top-down recursive traversal of the DAG mirrors depth-first search across subproblem states.
+Redundant recomputation in the DAG is mitigated by caching results, analogous to filling the DP Grid.
+The DP Grid can be interpreted as a compressed, layer-wise flattening of the DAG.
+Both representations model identical problem constraints but differ in traversal and storage semantics.
+The DP Grid supports iterative implementations, making it favorable in space/time-constrained environments.
+The DAG highlights the recursive dependencies and structure of the decision tree.
+Each path from the root to the leaf in the DAG corresponds to a potential LCS candidate.
+The longest path in the DAG, among all valid character-aligned paths, yields the LCS.
+The DP Grid approach ensures deterministic evaluation by eliminating recursive backtracking.
+The DAG enables structural visualization of the decision-making process in LCS construction.
+Recursive memoization over the DAG leads to the same solution as iterative DP Grid computation.
+Traversing the DAG with full memoization effectively simulates filling the DP Grid.
+The DP Grid solution is bounded and efficient, but less intuitive for understanding recursion flow.
+The DAG abstraction emphasizes the multiplicity of subproblem resolutions and the need for pruning.
+Multiple LCSs of the same maximum length may exist, necessitating path enumeration in the DAG.
+Backtracking through the DP Grid with branching logic enables recovery of all valid LCSs.
+The DAG must record traversal histories or path sets to generate all LCS strings.
+Topological ordering is implicit in the DAG, allowing dynamic programming to compute bottom-up solutions.
+The acyclic nature of the DAG ensures no revisit of already computed subproblems.
+The transition logic in the DP Grid is bounded to constant-time local decisions.
+Memory-efficient implementations of the DP Grid use two rolling vectors instead of full matrices.
+The DAG benefits from state compression by mapping similar subproblem instances to the same node.
+Reverse engineering the DP Grid enables understanding of the forward dynamic transitions.
+Advanced analysis of the DAG can expose the structure of dynamic recursion and branching factor.
+The anti-diagonal levels in the DP Grid correspond to layers of equal recursion depth in the DAG.
+The LCS length remains invariant to string permutations, and both the DP Grid and DAG reflect this.
+The DP Grid operates with complete visibility into previously computed states, ensuring efficiency.
+Without memoization, the DAG degenerates into a combinatorial tree with O(2^n) complexity.
+Backtracking decisions in the DP Grid rely on conditional comparisons between adjacent cells.
+In the DAG, backtracking corresponds to ascending edges from child nodes to parents.
+The symmetry of the DP Grid ensures identical results for swapped input strings.
+The DAG can be extended to k strings, but state management becomes exponentially complex.
+For three strings, the DP Grid generalizes to a 3D table with cubic complexity.
+The corresponding DAG for three strings expands into a ternary tree structure of paths.
+The DP Grid can be adapted to solve related problems like edit distance or common substring.
+The DAG structure offers flexibility in incorporating different problem constraints dynamically.
+Traversing the DAG with weighted transitions allows integration of cost-based extensions.
+The DP Grid restricts transitions to local maxima, enabling systematic propagation of optimal solutions.
+The time complexity for both DP Grid and DAG (with memoization) is O(mn).
+In the DAG, node uniqueness must be ensured via proper hashing or coordinate mapping.
+The DP Grid enables traceability of decisions using parent pointer arrays or direction matrices.
+In the DAG, decision trees can be pruned based on known bounds or suboptimal branches.
+Advanced backtracking in the DP Grid supports retrieval of all possible LCS sequences.
+The DAG structure allows exploration of non-standard paths under relaxed constraints.
+The DP Grid simplifies to a linear scan when one of the strings is empty.
+The DAG terminates early when any node reaches the base index (0,0).
+Recursive memoization over the DAG is sensitive to call stack limitations.
+The DP Grid avoids this by offering constant-stack iterative solutions.
+Real-world implementations of LCS (e.g., diff tools) leverage the DP Grid due to performance.
+Theoretical analysis of branching complexity is easier with the DAG model.
+LCS extensions like approximate matches or edit paths are naturally expressible on the DAG.
+The DP Grid becomes cumbersome to generalize for probabilistic variants.
+Lexicographically smallest LCS can be retrieved by modifying path choice logic in the DP Grid.
+The DAG supports this by always choosing alphabetically smaller branching nodes.
+Substring constraints modify boundary conditions in both the DP Grid and DAG.
+The DP Grid supports tabulation of all intermediate LCS lengths for subinterval analysis.
+The DAG facilitates early exits in recursive calls for optimization.
+Forward search in the DP Grid contrasts with recursive depth-first navigation in the DAG.
+The DP Grid supports parallel computation across anti-diagonal wavefronts.
+The DAG model extends to probabilistic automata when characters are weighted.
+Memoization tables in the DAG directly correspond to the DP Grid’s filled matrix.
+Cache efficiency is higher in DP Grid due to predictable access patterns.
+DAG traversal order may be non-deterministic due to recursion stack behavior.
+Ultimately, both DP Grid and DAG representations converge to the same optimal LCS value through structured dynamic programming.

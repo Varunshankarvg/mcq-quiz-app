@@ -1,0 +1,80 @@
+A graph is a set of nodes connected by edges.
+A graph can be represented in different ways.
+The two main representations are adjacency matrix and adjacency list.
+In an adjacency matrix, a 2D array is used.
+In an adjacency matrix, rows and columns represent nodes.
+If there is an edge between two nodes, the matrix entry is 1.
+If there is no edge, the entry is 0.
+An adjacency matrix is useful for dense graphs.
+A dense graph has many edges.
+The adjacency matrix uses O(V²) space, where V is the number of vertices.
+The adjacency matrix is easy to understand.
+The adjacency matrix works well when quick edge lookups are needed.
+Edge lookup in an adjacency matrix takes O(1) time.
+Updating an edge is easy in an adjacency matrix.
+Deleting an edge is simple using an adjacency matrix.
+The adjacency matrix includes all possible vertex pairs.
+It works well for graphs with fewer vertices and more edges.
+It does not save space for sparse graphs.
+Sparse graphs have fewer edges.
+Memory usage in adjacency matrix does not change with fewer edges.
+An adjacency list uses less space for sparse graphs.
+The adjacency list uses an array of lists.
+Each index in the array represents a node.
+Each list at the index stores the neighbors of that node.
+The adjacency list grows with the number of edges.
+The adjacency list is more space efficient.
+It takes O(V + E) space, where E is the number of edges.
+The adjacency list is ideal for sparse graphs.
+Traversing a graph using an adjacency list is memory-friendly.
+In an undirected graph, both nodes store each other as neighbors.
+In a directed graph, only one direction is stored in the list.
+Edge lookup in an adjacency list can take longer.
+Edge lookup takes O(k) time in an adjacency list, where k is degree of the node.
+Updating an edge in an adjacency list takes more steps.
+Deleting an edge requires searching in the list.
+The adjacency list is good for exploring neighbors.
+Graphs with many nodes and few edges prefer adjacency list.
+Adjacency list supports dynamic graphs better.
+Graphs that change often benefit from adjacency list.
+Adding a node is easier in adjacency list.
+Adding an edge is done by inserting in the list.
+Adjacency list avoids wasting memory.
+Adjacency matrix has constant-time access.
+Adjacency list has variable-time access.
+Matrix representation is easier to implement.
+List representation is harder to implement but saves memory.
+Graph algorithms use both types of representations.
+Dijkstra’s algorithm uses adjacency list often.
+Floyd-Warshall uses adjacency matrix.
+Matrix representation is suitable for small graphs.
+List representation is good for large graphs.
+Matrix can represent weighted graphs with weights as values.
+List can also store weights in each neighbor entry.
+Matrix is symmetric for undirected graphs.
+Matrix is asymmetric for directed graphs.
+List can store edge attributes easily.
+List supports complex graph models like multigraphs.
+Matrix makes graph operations predictable in time.
+List makes graph operations efficient in space.
+Memory is wasted in matrix if graph is sparse.
+Memory is saved in list if graph is sparse.
+Graph input from users is often converted to one of these forms.
+Graph traversal algorithms like DFS and BFS use both formats.
+Adjacency list is better for DFS and BFS in sparse graphs.
+Matrix is better if edges need to be checked frequently.
+Matrix has high memory usage regardless of edges.
+List memory grows only when edges increase.
+Converting from matrix to list is possible.
+Converting from list to matrix is also possible.
+Matrix has fixed size; list is flexible.
+Graphs in AI and pathfinding use adjacency lists.
+Graphs in physics simulations may use matrices.
+List is easier to store in files.
+Matrix is easy to display as a grid.
+Sparse matrix techniques are used to optimize matrix space.
+Graph libraries provide both options.
+Some languages have built-in support for adjacency lists.
+For dense connectivity, matrix is faster.
+For low connectivity, list is more efficient.
+Choice of graph representation affects speed and memory.

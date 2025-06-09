@@ -1,0 +1,17 @@
+What is the Two-Pointer Technique?
+Two-Pointer Technique uses two pointers to traverse an array.
+In Two-Pointer Technique, the pointers may start from the beginning, end, or both.
+The Two-Pointer Technique is often used in sorted arrays, merging, or window-based problems.
+Two-Pointer Technique avoids nested loops and improves time from O(N²) to O(N).
+
+Common Easy-Level Problems:
+Pair Sum in Sorted Array: Move one pointer from start and one from end to find a pair with target sum.
+Check Palindrome: Compare start and end elements to see if the array is the same forward and backward.
+Merge Two Sorted Arrays (In-place): Use pointers to merge arrays without using extra space.
+Remove Duplicates: Use a slow pointer for unique elements, and fast pointer to check duplicates.
+Move Zeros to End: Track zero positions and move non-zero elements forward.
+
+Complexity in Easy Problems:
+The time complexity of Two-Pointer problems are mostly O(N) time.
+There is no need for nested loops in Two-Pointer Problems.
+The Two-Pointer Technique is best for direct comparisons and sorted data.

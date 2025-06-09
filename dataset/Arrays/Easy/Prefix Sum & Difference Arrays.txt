@@ -1,0 +1,50 @@
+A prefix sum array is a technique used to compute the sum of elements in a range efficiently.
+The prefix sum array stores the cumulative sum of elements from the start of the array.
+It helps in answering range sum queries in constant time O(1) after preprocessing.
+The first element of the prefix sum array is the same as the first element of the original array.
+Each prefix sum value is computed by adding the previous sum to the current element.
+The prefix sum formula is prefix[i] = prefix[i - 1] + arr[i].
+Once the prefix sum array is built, finding the sum of any subarray is efficient.
+To find the sum between two indices L and R, use prefix[R] - prefix[L - 1].
+Prefix sum reduces the time complexity of multiple range sum queries from O(n) to O(1).
+The prefix sum technique is widely used in competitive programming and data analysis.
+It is useful for financial data processing, such as calculating cumulative revenue.
+The prefix sum array allows fast sum lookups, making it ideal for large datasets.
+It is used in weather data analysis to compute average temperatures over time.
+Prefix sum helps in image processing, where cumulative pixel intensities need to be computed.
+In e-commerce analytics, prefix sum is used to analyze cumulative sales data.
+The prefix sum technique is often used in game leaderboards for ranking players.
+2D prefix sum is used for fast sum computation in matrix-based problems.
+The concept of prefix sum extends to cumulative frequency tables in statistics.
+In scientific computing, prefix sums help in numerical integration and data modeling.
+Prefix sum can be modified to work with negative numbers as well.
+The prefix sum method can be used in histogram equalization in image processing.
+Prefix sums make it easier to calculate moving averages in time-series data.
+A variation of the prefix sum technique is the modular prefix sum, used in cyclic calculations.
+Parallel computing uses prefix sum in GPU programming for fast array operations.
+Prefix sum can be extended to circular arrays, making it useful for buffered data processing.
+A difference array helps efficiently update multiple elements in an array.
+It allows fast range updates without modifying each element individually.
+The difference array stores the change between consecutive elements of an array.
+The formula for computing a difference array is diff[i] = arr[i] - arr[i - 1].
+If we want to update a range [L, R] by adding X, we modify diff[L] += X and diff[R+1] -= X.
+The original array is reconstructed by taking the prefix sum of the difference array.
+Difference arrays are useful in incremental updates, such as in attendance tracking.
+This technique is often applied in range increment problems in competitive programming.
+The time complexity for range updates using a difference array is O(1).
+Difference arrays help in population growth analysis, where bulk changes happen over time.
+The restoration process of the original array requires a cumulative sum operation.
+Difference arrays are useful for modifying road traffic flow models efficiently.
+In biostatistics, they help analyze cumulative changes in patient data over time.
+It is useful for updating game scores in multiplayer gaming systems.
+Difference arrays can be used for mass salary adjustments in payroll systems.
+This technique is efficient in lighting adjustments in 3D rendering, where bulk changes are applied.
+The difference array approach reduces memory writes, making it useful for hardware optimization.
+In data streaming, difference arrays help track incremental changes in real-time.
+They are useful in stock market trend analysis, where cumulative changes need to be computed quickly.
+Large-scale simulations use difference arrays to track environmental changes over time.
+Weather forecasting models apply difference arrays to process temperature variations efficiently.
+In network security, difference arrays can track suspicious access pattern fluctuations.
+Difference arrays are used in robotics to adjust sensor data in real-time.
+This technique helps in bulk database updates, where multiple records need modification.
+Difference arrays optimize incremental sorting algorithms, improving overall computation speed.

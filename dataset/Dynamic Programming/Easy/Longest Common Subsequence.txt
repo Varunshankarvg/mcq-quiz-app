@@ -1,0 +1,80 @@
+LCS finds the longest subsequence common to two sequences.
+The LCS problem uses a dynamic programming grid to store intermediate results.
+Each cell in the dynamic programming grid represents a subproblem based on prefixes of two strings.
+The grid is filled row by row from top-left to bottom-right.
+The dynamic programming grid helps avoid recalculating the same subproblems.
+LCS is not about contiguous characters but about ordered matching.
+Each cell (i, j) in the grid compares characters from string1[i-1] and string2[j-1].
+If characters match, we move diagonally in the grid and add one to the LCS count.
+If characters don’t match, we take the maximum from the left or top cell in the grid.
+The grid’s size is (m+1) x (n+1), where m and n are lengths of the two strings.
+The base case in the grid initializes the first row and column to zero.
+The final answer lies at the bottom-right corner of the dynamic programming grid.
+LCS can also be visualized as a DAG, where each node represents a subproblem (i, j).
+In the DAG, each node points to its next possible subproblems.
+A path through the DAG represents a choice of including or excluding characters.
+The DAG is acyclic because we only move right, down, or diagonally.
+Memoization stores the results of each (i, j) node in the DAG to avoid recomputation.
+The length of the LCS is the maximum path length through the DAG where characters match.
+In the grid, a matching character leads to a diagonal increment.
+In the DAG, matching characters form the nodes contributing to the LCS.
+A mismatch results in choosing between top or left in the grid.
+The DAG branches based on character matches or mismatches.
+LCS is useful in comparing files and DNA sequences.
+The grid helps track all possible common subsequences efficiently.
+The DAG avoids recomputation by reusing overlapping subproblems.
+Recursive LCS without memoization leads to exponential time.
+Using a grid, we reduce the time complexity to O(m*n).
+The DAG model allows visualizing the subproblem dependencies.
+Backtracking from the bottom-right cell in the grid gives the actual LCS string.
+We move diagonally while backtracking if characters match in the grid.
+If they don’t match, we move to the cell with the greater value in the grid.
+The DAG backtrack also follows maximum-valued paths to trace the LCS.
+The grid approach is deterministic and guarantees optimal results.
+The DAG has a topological order since it’s acyclic.
+Space complexity can be reduced using only two rows of the grid.
+This optimization comes from the observation that only the previous row is needed in the grid.
+LCS is different from Longest Common Substring.
+Substring requires continuous matches; grid for substring resets on mismatches.
+The DAG model for substring differs due to contiguous constraints.
+LCS in grid doesn’t reset on mismatch; it builds over multiple positions.
+LCS supports both bottom-up and top-down approaches using the grid or DAG.
+In bottom-up, the grid is filled by iterating through both strings.
+In top-down, the DAG is recursively traversed with memoization.
+The grid solution has better iterative control and predictable memory usage.
+The DAG recursion is easier to code but can risk stack overflow without memoization.
+Every move in the grid or DAG reflects a decision in the subproblem.
+LCS helps in measuring similarity between texts.
+The structure of the grid is like a table of all subproblem answers.
+The DAG is a tree-like structure of all possible match combinations.
+Every subproblem is solved once in the grid method.
+The DAG has nodes equal to the number of unique (i, j) pairs.
+LCS has optimal substructure — smaller problems combine into larger ones.
+This is evident in how the grid is filled using smaller cell values.
+The DAG shows this through node dependencies in recursive calls.
+The grid technique leads to clear and structured tabulation.
+The DAG visual shows flow of recursive function calls.
+The length of the LCS is independent of string order in the grid.
+But the order affects the actual common subsequence.
+The grid must be rebuilt for each unique string pair.
+The DAG is different for different string lengths and contents.
+In the grid, LCS length increases only on character match.
+The DAG encodes this condition in its transition rules.
+The problem is solved in polynomial time using dynamic programming grid.
+The recursive DAG version without memoization is exponential.
+The grid version is preferred for its time and space efficiency.
+The DAG helps understand recursion depth and branching.
+Dynamic programming transforms recursive DAG into efficient grid form.
+Overlapping subproblems are managed well in the grid.
+LCS is a classic problem to introduce the concept of grids in dynamic programming.
+LCS can be modified to find multiple subsequences using the same grid.
+Both grid and DAG ensure correctness if subproblem logic is accurate.
+Base cases in the grid are important for proper initialization.
+In the DAG, base cases terminate the recursion.
+The dimensions of the grid are directly proportional to input sizes.
+The number of nodes in the DAG is the product of string lengths.
+LCS length is useful in edit distance calculation.
+The grid can be extended to show actual characters of LCS.
+The DAG structure helps in understanding LCS variants like printing all LCSs.
+LCS is a building block for many diff tools and bioinformatics apps.
+Understanding the grid or DAG approach is essential for mastering dynamic programming.

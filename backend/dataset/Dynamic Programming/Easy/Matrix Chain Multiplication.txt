@@ -1,0 +1,80 @@
+Matrix Chain Multiplication is a dynamic programming problem.
+It is about finding the best way to multiply matrices.
+The goal is to minimize the number of scalar multiplications.
+The order of multiplication affects the total number of operations.
+Matrix multiplication is associative but not commutative.
+You cannot change the matrix order, only the way you group them.
+Each matrix has dimensions represented as rows and columns.
+The dimensions of all matrices are given in an array.
+You use this array to calculate the cost of multiplication.
+A brute-force method tries all ways to add parentheses.
+That brute-force method takes exponential time.
+Dynamic programming solves it more efficiently.
+We use a table to store solutions of subproblems.
+Each cell in the table stores the minimum multiplication cost.
+The table is filled diagonally.
+We try all split points between matrices.
+For every split, we calculate cost of left and right parts.
+We also add cost of multiplying the resulting matrices.
+The final answer is in the top-right cell of the table.
+Matrix Chain Multiplication is a parenthesization problem.
+It is a type of optimization problem.
+It involves overlapping subproblems.
+It has an optimal substructure.
+This makes it perfect for dynamic programming.
+It helps avoid repeated calculations.
+The base case is when we have a single matrix.
+No cost is needed to multiply a single matrix.
+We build up the answer using smaller results.
+The key is to choose the best position to split.
+For each split, we recursively compute both sides.
+Matrix multiplication only works when inner dimensions match.
+So dimensions must be chosen carefully.
+Incorrect dimensions lead to invalid multiplication.
+The multiplication cost depends on the matrix sizes.
+A wrong grouping can be very costly.
+Right grouping saves a lot of computation.
+We usually multiply n-1 matrices.
+If the dimension array has n numbers, there are n-1 matrices.
+Each matrix Ai has dimension p[i-1] x p[i].
+The multiplication of Ai × Ai+1 costs p[i-1] × p[i] × p[i+1].
+You can’t always just go left to right.
+Sometimes, multiplying from the middle is cheaper.
+The problem is about deciding where to place brackets.
+Dynamic programming helps test all options efficiently.
+The solution uses two loops for length and starting index.
+It checks all sub-chain lengths.
+The result is built up in stages.
+Each stage uses previous stages' results.
+The time complexity is O(n³).
+The space complexity is O(n²).
+It is used in databases for optimizing query execution.
+It helps in parsing expressions.
+It has applications in compiler design.
+It is a classical DP problem.
+It is often taught in algorithm courses.
+It's also used to practice 2D DP table logic.
+The DP table represents cost of subproblems.
+Matrix Chain Multiplication shows how subproblems overlap.
+The minimum cost is chosen from all splits.
+The index of the split can be stored for reconstruction.
+Using a separate table to store split points helps build the bracket structure.
+Matrix Chain Multiplication is not about actual multiplication.
+It is only about choosing the best order.
+The actual multiplication happens later.
+The split point table helps print the optimal parenthesization.
+The optimal cost is computed bottom-up.
+The solution table is filled by increasing chain length.
+Chains of length 2 are solved before longer chains.
+Each cell in the table depends on smaller chains.
+The problem gets harder as the chain gets longer.
+We must compare all possible split points.
+We track the minimum cost in each case.
+Dynamic programming avoids solving same subproblem again.
+Matrix Chain Multiplication shows the importance of DP over recursion.
+It is used in real-time systems for reducing delays.
+The problem demonstrates how order of operations affects performance.
+It shows how simple rules like associativity can be optimized.
+Even though multiplication order doesn’t change the result, it changes the cost.
+It’s a typical example of solving using DP with 2D arrays.
+Matrix Chain Multiplication helps develop strong DP skills.

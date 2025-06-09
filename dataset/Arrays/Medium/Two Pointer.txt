@@ -1,0 +1,17 @@
+Optimized Techniques for Intermediate Problems
+The two-pointer method shines when paired with sorting or window-based techniques.
+The two-pointer method reduces the time for intersection, union, and nearest pair-type problems.
+The The two-pointer method is often used in dynamic subarrays or binary-based arrays where traversal is conditional.
+
+Standard Medium-Level Challenges:
+Intersection of Sorted Arrays: Pointers walk through both arrays to find common elements in linear time.
+Union of Sorted Arrays: Pointers gather all unique elements while skipping duplicates.
+Sort 0s, 1s, and 2s (Dutch Flag): A trio of pointers partitions the array with just one pass.
+Closest Pair to Target Sum: Pointers converge to find the nearest sum to a given value.
+Max Consecutive 1s: A window slides to count the longest streak of ones.
+Longest Subarray with Sum ≤ K: Pointers shift range boundaries to track a valid subarray under the sum threshold.
+
+Complexity and Care
+The time complexity of Two-Pointer problems are mostly are O(N) or O(N log N) depending on pre-sorting.
+Edge cases in two-pointer technique involve duplicates, negative numbers, and tight constraints.
+Sliding windows often require one direction movement for correctness.

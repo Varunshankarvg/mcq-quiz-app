@@ -1,0 +1,80 @@
+A binary tree is a hierarchical structure where each node has at most two child nodes, referred to as the left and right children.
+The structure of a binary tree is recursively defined, with each subtree itself being a binary tree.
+A complete binary tree maintains all levels fully filled except possibly the last, which is filled from left to right.
+In a full binary tree, every non-leaf node strictly has two children.
+A perfect binary tree is both full and complete, with all leaves at the same depth and all internal nodes having two children.
+The root of a binary tree is the topmost node and serves as the entry point to the structure.
+The height of a binary tree is defined as the length of the longest path from the root to any leaf node.
+A leaf node in a binary tree has no children and represents the termination of a path.
+Internal nodes in a binary tree are those which have at least one child, distinguishing them from leaves.
+A balanced binary tree ensures that the height difference between the left and right subtrees is minimal to maintain efficiency.
+Traversal in binary trees includes inorder (left-root-right), preorder (root-left-right), and postorder (left-right-root).
+In a binary tree, inorder traversal is particularly useful for retrieving sorted data from a binary search tree.
+Preorder traversal in binary trees is used to clone trees or create prefix notation expressions.
+Postorder traversal is helpful in deleting trees or evaluating postfix expressions.
+Binary trees allow efficient organization and retrieval of hierarchical information.
+A binary tree node typically contains data and pointers to its left and right child nodes.
+A degenerate binary tree degenerates into a linear list due to having only one child at each node.
+Expression trees, which are binary trees, are used to represent arithmetic expressions.
+A skewed binary tree has nodes extending only to the left or only to the right, depending on insertion order.
+The depth of a node in a binary tree refers to the number of edges from the root to that node.
+Binary trees can be stored either as linked structures or using array-based representations.
+In a complete binary tree, children of the node at index i in an array representation are at indices 2i+1 and 2i+2.
+Full binary trees contain the maximum number of nodes for their height under the full tree definition.
+A perfect binary tree of height h contains exactly 2^h - 1 nodes.
+A balanced binary tree minimizes height and keeps operations close to O(log n).
+Binary trees are inherently recursive in structure, which simplifies many algorithms.
+Trees with height imbalance perform poorly in time-critical applications.
+Binary trees are widely used in recursive algorithm problems.
+Level-order traversal in binary trees uses a queue to visit nodes level by level.
+Binary trees can model hierarchical data such as file systems or organizational charts.
+Binary trees play a crucial role in implementing efficient searching and sorting mechanisms.
+Binary trees are used as a foundation for self-balancing trees like AVL and Red-Black Trees.
+A complete binary tree ensures efficient memory use and is typically used in heaps.
+Binary trees can be built from inorder and preorder or inorder and postorder traversal arrays.
+The number of null pointers in a binary tree is always one more than the number of nodes.
+Binary trees are frequently used in the construction of syntax trees in compilers.
+An internal path length of a binary tree is the sum of depths of all internal nodes.
+The external path length includes the depths of all external (leaf) nodes.
+A binary tree can be traversed non-recursively using an explicit stack or queue.
+The mirror image of a binary tree is produced by swapping left and right subtrees recursively.
+Binary trees support ancestor-descendant relationships between nodes.
+The lowest common ancestor of two nodes in a binary tree can be found using recursion.
+Binary trees enable divide and conquer algorithms by breaking problems into subtrees.
+Binary trees support insertion, deletion, and search operations based on tree type.
+The time complexity for tree traversal in a binary tree is O(n).
+A complete binary tree has minimal height for a given number of nodes.
+Binary trees are used in Huffman coding for lossless data compression.
+Balanced binary trees provide guaranteed performance for inserts and lookups.
+Binary trees can be serialized into a string representation and later deserialized.
+Binary trees are a precursor to binary search trees, where node values follow a specific order.
+Binary trees can be implemented using pointer-based or index-based systems.
+Binary trees allow efficient modeling of hierarchical menus or forms.
+Heaps, implemented as complete binary trees, support efficient priority queue operations.
+Binary trees help represent game trees in decision-making algorithms like minimax.
+Tree rotations are not required in regular binary trees but are essential in self-balancing trees.
+A binary tree can be constructed from a breadth-first array representation.
+Binary trees can have different shapes even with the same set of nodes.
+Binary trees are traversed using Depth-First or Breadth-First strategies.
+Preorder traversal is useful in prefix notation evaluation.
+Postorder traversal simplifies deletion of binary trees.
+Inorder traversal gives a sorted sequence in a binary search tree.
+Binary trees enable fast insertions and deletions compared to arrays.
+Binary trees support hierarchical grouping of data for decision systems.
+A complete binary tree maintains compactness and efficient index mapping.
+Binary trees offer flexibility in data modeling and structure.
+Recursive solutions in binary trees are often cleaner and more elegant.
+Balanced binary trees ensure logarithmic access time in worst-case scenarios.
+Binary trees can have infinite variations based on insertion order.
+Binary trees are used in algorithms for finding paths and distances between nodes.
+The shape of a binary tree significantly affects performance in operations.
+Binary trees are often taught as foundational structures in data structures courses.
+Binary trees can be traversed without recursion using iterative methods and stacks.
+Binary trees enable efficient parsing of hierarchical structured input.
+Binary trees can be visualized using tree diagrams or indentation formats.
+Binary trees assist in modeling real-world problems such as scheduling or planning.
+A binary tree is a non-linear data structure and represents relationships not easily handled by arrays.
+Binary trees are key in understanding other tree-based structures.
+Binary trees support modeling of multilevel decision-making systems.
+Serialization of binary trees helps in data storage and transfer.
+Binary trees continue to be central to algorithm design and efficient data representation.

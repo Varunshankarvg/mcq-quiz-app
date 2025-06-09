@@ -1,0 +1,143 @@
+/* QuizApp.css */
+
+.quiz-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.quiz-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.quiz-container h2 {
+  margin-top: 3rem;
+  color: #444;
+}
+
+.difficulty,
+.score {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.dropdown {
+  width: 60%;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f0f4f8;
+  transition: border 0.2s ease;
+}
+
+.dropdown:focus {
+  border-color: #007bff;
+}
+
+.start-btn,
+.stop-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.start-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.start-btn:disabled {
+  background-color: #a0caa8;
+  cursor: not-allowed;
+}
+
+.stop-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.question-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.question-container p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.answer-btn {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0.5rem auto;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.answer-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Export to PDF button */
+.export-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.export-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Recharts pie chart responsiveness */
+.recharts-wrapper {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown {
+    width: 90%;
+  }
+
+  .quiz-container {
+    padding: 1rem;
+  }
+
+  .answer-btn {
+    font-size: 0.95rem;
+  }
+}

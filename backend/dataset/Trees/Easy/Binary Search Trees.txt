@@ -1,0 +1,80 @@
+A Binary Search Tree stores data in a sorted manner using a binary tree structure.
+In a Binary Search Tree, the left child of a node contains smaller values.
+In a Binary Search Tree, the right child contains larger values than the parent.
+A Binary Search Tree allows fast searching using the sorted nature of the tree.
+A Binary Search Tree supports insertions in O(log n) time on average.
+A Binary Search Tree provides fast deletion if the tree is balanced.
+A Binary Search Tree performs well when the data is randomly ordered.
+In a Binary Search Tree, searching starts from the root and moves left or right.
+The Binary Search Tree is a type of binary tree with ordered structure.
+A Binary Search Tree has a maximum of two children for each node.
+In a Binary Search Tree, all values in the left subtree are less than the node.
+In a Binary Search Tree, all values in the right subtree are greater than the node.
+A Binary Search Tree enables fast lookup compared to unsorted lists.
+Binary Search Trees can be implemented using recursion.
+A Binary Search Tree can be traversed in in-order to get sorted data.
+The in-order traversal of a Binary Search Tree always gives sorted values.
+A Binary Search Tree's efficiency depends on its height.
+If a Binary Search Tree becomes skewed, its performance becomes linear.
+A skewed Binary Search Tree happens when elements are inserted in order.
+A Binary Search Tree can be balanced using special algorithms.
+Binary Search Trees are commonly used in searching and sorting.
+A Binary Search Tree can be used to store duplicate values with proper handling.
+In a Binary Search Tree, duplicates are usually stored in the right subtree or handled with counts.
+A Binary Search Tree’s root is the first node inserted into the tree.
+Binary Search Trees help in range searching within a dataset.
+A Binary Search Tree is dynamic and allows insertion and deletion at any time.
+In a Binary Search Tree, inserting a new value compares it with existing nodes.
+Binary Search Trees follow a recursive structure, which is ideal for recursion.
+Binary Search Trees help in implementing efficient dictionary structures.
+A Binary Search Tree can be empty or contain many nodes.
+Binary Search Trees can grow in depth as elements are added.
+A Binary Search Tree’s height affects the speed of all operations.
+A Binary Search Tree works best when the tree is balanced.
+A Binary Search Tree can be balanced using AVL or Red-Black Trees.
+A Binary Search Tree does not automatically balance itself.
+Binary Search Trees are the base for many advanced tree types.
+Binary Search Trees can be visualized easily for learning purposes.
+A Binary Search Tree allows faster minimum and maximum value search.
+The leftmost node in a Binary Search Tree gives the minimum value.
+The rightmost node in a Binary Search Tree gives the maximum value.
+A Binary Search Tree can be used to implement priority queues.
+In a Binary Search Tree, deleting a node with two children is slightly complex.
+Deleting a leaf node in a Binary Search Tree is simple and fast.
+Binary Search Trees are suitable for building indexes in databases.
+In a Binary Search Tree, the balance must be maintained for best performance.
+Binary Search Trees allow efficient range counting queries.
+A Binary Search Tree’s structure changes as elements are added or removed.
+Binary Search Trees can be visualized as sorted decision paths.
+A Binary Search Tree can degenerate into a linked list if not managed.
+Binary Search Trees help reduce the number of comparisons in searches.
+Binary Search Trees store elements in a structured and ordered format.
+In a Binary Search Tree, nodes follow a strict order to maintain the tree properties.
+Binary Search Trees are suitable for recursive programming techniques.
+Binary Search Trees can be implemented using arrays or linked structures.
+The middle element of sorted data makes a good root for a balanced Binary Search Tree.
+Binary Search Trees offer better performance than linear structures in most cases.
+A Binary Search Tree can be empty, and still be considered a valid tree.
+The depth of a Binary Search Tree is the number of levels in it.
+Binary Search Trees help in building efficient memory hierarchies.
+A Binary Search Tree is often used in competitive programming problems.
+Binary Search Trees support updating values efficiently with search.
+Binary Search Trees are useful in constructing Huffman trees and parsers.
+Binary Search Trees offer predictable time complexity when balanced.
+A Binary Search Tree should be rebalanced if too many ordered insertions happen.
+Binary Search Trees can be extended to interval trees for range operations.
+Binary Search Trees can also be modified to support dynamic sets.
+A Binary Search Tree can be used to maintain historical data in order.
+Binary Search Trees are often used in operating systems and compilers.
+A Binary Search Tree is not suitable for random access like arrays.
+Binary Search Trees provide structure that improves memory access time.
+Binary Search Trees are often used in games for decision-making trees.
+Binary Search Trees are also used in graph algorithms like Kruskal’s algorithm.
+A Binary Search Tree enables cumulative operations like prefix sums when augmented.
+Binary Search Trees support various types of traversal: pre-order, in-order, and post-order.
+Binary Search Trees are useful in storing sorted events in simulations.
+Binary Search Trees can be used to auto-complete search suggestions.
+Binary Search Trees are useful in building efficient real-time searching applications.
+Binary Search Trees work best when keys are compared efficiently.
+A Binary Search Tree can be visualized as a binary decision-making structure.
+Binary Search Trees are a fundamental topic in data structures and algorithms.

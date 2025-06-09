@@ -1,0 +1,80 @@
+The Longest Common Subsequence problem finds the maximum-length subsequence present in both strings using a Dynamic Programming Grid.
+The solution is built by comparing characters of both strings and storing results in a DP grid.
+Each cell in the DP grid represents the LCS length of prefixes of the two strings.
+The value in cell (i, j) of the DP grid is calculated based on whether characters at (i−1) and (j−1) match.
+If characters match, the value comes from the diagonal cell plus one in the DP grid.
+If they don't match, we take the max from the left or top cell in the DP grid.
+The first row and column of the DP grid are filled with zeros, representing empty substrings.
+The final LCS length is found at the bottom-right cell of the DP grid.
+The DP grid allows solving LCS in O(m×n) time.
+The space complexity of the DP grid approach is also O(m×n), but can be optimized.
+The DP grid structure provides a tabular view of overlapping subproblems.
+The LCS problem satisfies the optimal substructure property in the DP grid.
+The problem also has overlapping subproblems, handled efficiently by the DP grid.
+The LCS problem can also be modeled as a Directed Acyclic Graph (DAG) where each node is a subproblem.
+In the DAG, each node (i, j) branches to (i+1, j), (i, j+1), or (i+1, j+1) depending on the characters.
+The DAG only moves forward, ensuring it's acyclic.
+The DAG model helps in understanding the recursion tree of the problem.
+The recursive solution explores all paths in the DAG, but without memoization it’s inefficient.
+Memoization adds memory to store previously computed nodes in the DAG.
+This converts the exponential recursive DAG into a polynomial solution.
+Each match in the strings leads to a diagonal move in the DP grid or down-right in the DAG.
+The DP grid captures the longest path through all matching characters.
+The DAG reflects how different character combinations affect the result.
+The top-down recursive solution over the DAG mimics DFS traversal.
+The bottom-up tabulation in the DP grid is iterative and systematic.
+To construct the actual LCS string, backtracking is used on the DP grid.
+During backtracking in the DP grid, diagonal movement indicates inclusion of a character.
+If moving up or left in the DP grid, the current characters are excluded from LCS.
+The same backtracking logic can be applied on the DAG by following maximum-valued paths.
+The DAG structure helps visualize recursive calls and dependencies.
+The DP grid is deterministic, with each cell computed only once.
+The DAG has redundant paths unless memoization is used.
+For large strings, iterative DP grid is more memory-safe than recursive DAG.
+In competitive coding, the DP grid method is commonly preferred.
+Space optimization of the DP grid can reduce memory from O(m×n) to O(n).
+This is done by keeping only two rows at a time in the DP grid.
+The LCS problem is frequently used in file comparison tools using the DP grid.
+The DAG model can be expanded to explore all possible LCS sequences.
+The number of distinct LCSs can be found by traversing the DAG and collecting all valid paths.
+The DP grid only gives one LCS unless explicitly modified.
+LCS is different from Longest Common Substring, which needs continuous characters in the DP grid.
+Substring problems use a different grid structure where mismatches reset values to zero.
+In contrast, LCS values continue to grow across the DP grid despite mismatches.
+The DAG version of LCS keeps branching unless restricted by memoization.
+The DP grid uses previous values in top, left, or diagonal positions for transitions.
+LCS length never decreases as we move right or down in the DP grid.
+The DAG is a tree-like expansion of all subproblem branches.
+Depth of the DAG is equal to the sum of string lengths in the worst case.
+Traversing the DAG shows how choices at each index affect the solution.
+The DP grid prevents redundant traversals by storing and reusing results.
+The DAG shows that multiple paths can lead to the same (i, j) subproblem.
+Top-down memoization uses a table that mirrors the DP grid.
+Both DP grid and DAG methods require defining a base case for zero-length prefixes.
+Without memoization, the DAG approach performs many overlapping calls.
+The DP grid approach processes all subproblems in order.
+Each cell in the DP grid captures the optimal solution for its subproblem.
+The number of subproblems is m×n, where m and n are string lengths.
+These subproblems are visualized as nodes in a DAG.
+The DP grid handles dependencies using a bottom-up fill strategy.
+The DAG handles dependencies by resolving recursive calls.
+The order of strings doesn't change the LCS length in the DP grid.
+But the path taken in the DAG may differ due to branching order.
+The DP grid structure helps design variants like printing all LCSs.
+The DAG structure enables extension into graph search problems.
+The DP grid implementation is preferred for its space-time tradeoff.
+The DAG is conceptually useful for teaching problem decomposition.
+Constructing the LCS string from the DP grid involves careful tracking of moves.
+The DAG variant requires storing sequences along with node values.
+LCS helps in computing string similarity using the DP grid.
+The DAG helps understand the branching factor of recursive algorithms.
+The LCS problem can be extended to three strings using a 3D DP grid.
+This adds another dimension to the dynamic programming table.
+The DAG for three strings becomes more complex due to added choices.
+For such problems, the DP grid is much easier to implement and debug.
+In real-world applications, the DP grid is more practical for performance.
+The DAG can be used for analyzing time complexity visually.
+The DP grid is well-suited for iterative, bottom-up implementations.
+The DAG is better suited for understanding top-down recursive structures.
+The LCS problem is a fundamental example in dynamic programming using DP grids.
+It is also a core problem to illustrate recursion graphs using a DAG.

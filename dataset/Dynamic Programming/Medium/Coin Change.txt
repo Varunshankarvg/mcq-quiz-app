@@ -1,0 +1,80 @@
+In the Coin Change problem, we aim to find the fewest coins needed to form a target value using an implicit DAG.
+Each node in the DAG corresponds to a monetary amount from 0 up to the target.
+Directed edges in the DAG exist from a node i to i + coin, for each coin denomination.
+This graph is acyclic because we never move from a higher amount back to a lower one.
+Since there are no backward edges, this structure forms a Directed Acyclic Graph.
+The base node, amount 0, has no incoming edges and serves as the starting point in the DAG.
+Every amount i in the graph can have multiple incoming edges depending on coin denominations.
+The shortest path in this DAG from node 0 to node target represents the minimum number of coins.
+A bottom-up DP approach simulates traversal of this DAG by gradually building solutions.
+The edge from i to i + coin signifies choosing a coin and increasing the amount.
+For each node, we evaluate transitions from all coins to determine the optimal coin count.
+The DAG model allows dynamic programming to reuse overlapping subproblems efficiently.
+Memoization in a top-down approach stores results of subpaths in the DAG to prevent recomputation.
+Each transition in the DAG corresponds to an addition operation with a coin’s value.
+When a node has no valid transitions, it means that amount cannot be formed with the given coins.
+In unbounded coin usage, each node can lead to repeated destinations through the same coin.
+The DAG remains acyclic because the construction ensures forward-only movement.
+The edge cost is uniform in the simplest form but can be weighted in generalized problems.
+The top-down method models a reverse traversal from target to 0, still within a DAG structure.
+In this model, edges go from amount to amount - coin if coin <= amount.
+Recursive calls map to backward traversal in the DAG, eventually terminating at base case 0.
+Each recursive call represents a possible sub-path to the target node in the DAG.
+The dynamic programming table functions as a distance array in graph algorithms.
+The array index i holds the minimum steps from node 0 to node i in the DAG.
+When coins are sorted, the DAG traversal order may remain the same due to independence of order.
+The use of a queue or loop structure mimics a level-order traversal in an unweighted DAG.
+In counting combinations, each path from node 0 to target corresponds to a valid combination.
+The number of such paths is the total number of coin combinations that form the amount.
+The structure supports multiple paths between the same pair of nodes due to different coin choices.
+In the bounded coin variant, the DAG is pruned by restricting repeated edges to once per coin.
+When modeling coin change combinations, we aggregate incoming paths instead of minimizing.
+In this variant, the DAG edge weight is irrelevant; only path count matters.
+The traversal always begins at node 0 and processes increasing node values.
+Every new reachable node is derived from an existing reachable node using a coin denomination.
+The algorithm guarantees that each reachable node is processed at most once in bottom-up.
+If a node remains unreachable, the DP table retains an infinity-like placeholder.
+Edge creation follows simple linear arithmetic: destination = source + coin.
+In implementation, the transition from node i to i+coin is expressed as updating dp[i+coin].
+The DAG’s size is dependent on both the number of coins and the target amount.
+For each of amount + 1 nodes, we process all coin denominations to simulate edges.
+Each node’s value reflects either the minimum number of transitions or the number of valid paths.
+The choice between combination or permutation solutions affects the DAG traversal order.
+In combination mode, coins are considered sequentially across the outer loop.
+In permutation mode, coin iteration happens in the inner loop for each amount.
+This difference modifies how the DAG is traversed logically.
+The DAG allows state transitions to be managed in a layered or phase-wise fashion.
+Each phase represents a step size in graph traversal using different coin values.
+For amount 7 and coins [1, 3, 4], the DAG allows many unique path options to node 7.
+Greedy algorithms fail in this DAG unless coin denominations are canonical.
+The shortest path logic here ensures optimality that greedy may not guarantee.
+Repeated node visits with better solutions help prune suboptimal paths in dynamic programming.
+The solution depends on the DAG maintaining non-cyclic and directional properties.
+The DAG structure supports full traceability of decision paths if we store transitions.
+Tracing back edges from target node can help reconstruct coin combinations.
+Every node in the DAG can be annotated with the previous coin used to build that state.
+In the case of space optimization, only limited nodes of the DAG are stored at a time.
+This optimization uses the property that current transitions depend only on recent past nodes.
+Edge density increases with smaller coin values, as they reach more nodes.
+For coins [1], the DAG becomes a complete chain from 0 to target with every edge used.
+When larger denominations are included, the DAG becomes sparser but more efficient.
+Understanding the graph analogy helps explain transitions better than raw DP logic.
+The problem constraints define the size and density of the underlying DAG.
+In some cases, graph-based visualizations can uncover unreachable nodes visually.
+DAG acyclicity removes the need for cycle detection or infinite loop safeguards.
+Topological sorting is implicit in bottom-up DP since states are visited in increasing order.
+A multi-source BFS over the DAG also solves the problem if coins are used as transition steps.
+This BFS version visits each node by pushing reachable nodes into a queue.
+In each BFS iteration, we simulate edge traversal by adding coins to current amount.
+The queue acts as a frontier in the DAG expanding from 0 to target.
+This approach guarantees the shortest path is found in an unweighted DAG.
+The edge cost becomes relevant when considering weighted variants like minimizing total coin value.
+In standard Coin Change, each coin use is treated uniformly, hence unweighted DAG.
+The algorithm can be adapted to find lexicographically smallest or largest coin sequences.
+This requires tracking additional data alongside each DAG node.
+Visualization tools like graphs help analyze why certain amounts can’t be formed.
+Edge failures indicate that no valid combination exists through that path.
+Memoization creates an auxiliary map that enhances the DAG’s computation flow.
+Dynamic programming builds the shortest or optimal path tree within the DAG structure.
+The DAG view aligns well with recurrence relations and optimal substructure.
+This conceptualization makes Coin Change a foundational example of DAG-based DP solutions.

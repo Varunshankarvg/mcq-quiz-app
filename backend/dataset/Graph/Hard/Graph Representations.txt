@@ -1,0 +1,80 @@
+In a directed graph, the adjacency matrix stores directionality by assigning edge weights only in one direction between nodes.
+An undirected graph yields a symmetric adjacency matrix since each edge implies bidirectional connectivity.
+In a weighted graph, the adjacency matrix replaces binary indicators with actual edge weights, typically numeric values.
+A sparse graph benefits more from an adjacency list due to its linear space complexity relative to the number of edges.
+A dense graph utilizes the adjacency matrix efficiently, as the O(V²) space is fully utilized.
+For a directed graph, adjacency lists explicitly preserve edge orientation, maintaining ordered mappings per vertex.
+In a multigraph, adjacency lists support multiple entries for the same vertex pair, accommodating repeated edges.
+For a simple graph, both matrix and list representations exclude self-loops and parallel edges unless explicitly modeled.
+In an undirected weighted graph, each edge's weight is stored twice in the adjacency list, once per vertex.
+A directed unweighted graph uses either a 0/1 matrix or a basic list without weights.
+The adjacency matrix of a complete graph contains all non-diagonal elements filled, reflecting maximum edge density.
+In a disconnected graph, rows and columns of the adjacency matrix may contain all zeros.
+A cyclic graph represented via an adjacency matrix reveals cycles by nonzero entries in its diagonal or through traversal.
+Directed acyclic graphs (DAGs) represented as adjacency lists support efficient topological sorting.
+In a weighted directed graph, lists are often implemented using pairs (vertex, weight) per edge.
+A bipartite graph’s adjacency matrix can be partitioned into two disjoint sets with no intra-set connections.
+The adjacency list of a tree, being an acyclic connected undirected graph, contains exactly n−1 entries for n nodes.
+In a planar graph, the adjacency list assists in embedding the graph in a 2D plane without edge crossings.
+For a regular graph, each row in the adjacency matrix will have the same number of non-zero entries.
+In a null graph (no edges), the adjacency matrix is filled entirely with zeros.
+An adjacency list is ideal for implementing the compressed sparse row (CSR) format for a sparse graph.
+The adjacency matrix of a symmetric directed graph mirrors the pattern of incoming and outgoing edges.
+Dynamic graph structures—such as evolving social networks—use adjacency lists for efficient edge insertion.
+The adjacency matrix of a graph enables constant-time edge existence queries using matrix[i][j].
+In contrast, sparse directed graphs require traversal of a vertex's list to verify edge presence.
+In a fully connected directed graph, each row of the adjacency matrix contains all non-zero entries except the diagonal.
+For an unweighted tree, adjacency lists provide space-efficient traversal without additional weight metadata.
+Weighted DAGs often require adjacency lists to optimize topological sorting with edge weights.
+In a flow network graph, adjacency matrices store edge capacities and are updated during residual graph construction.
+For undirected graphs, adjacency lists ensure bidirectional edge recording to simulate symmetry.
+In a graph representing a road network (sparse and weighted), adjacency lists are space-optimal.
+Graphs in GPU-accelerated applications prefer adjacency matrices for SIMD operations.
+A graph’s connectivity properties can be quickly assessed through its adjacency matrix rank.
+For random graph models like Erdős–Rényi, adjacency matrices assist in probability analysis over dense networks.
+In web graphs (directed and sparse), adjacency lists support rapid link-based traversal such as PageRank.
+In citation graphs, the adjacency list models directed citations efficiently as sparse outlinks.
+In a Hamiltonian graph, adjacency matrices are useful for backtracking search due to fast edge checks.
+In graph coloring problems, adjacency lists reduce memory use when most nodes have limited degrees.
+Transpose of a directed graph is derived by reversing edges in either the adjacency list or matrix.
+For interval graphs, the adjacency matrix can encode clique intersection patterns.
+In practice, adjacency lists outperform matrices when the average degree of a node is small.
+In contrast, graphs with high average degree benefit from matrix-based representations.
+Edge deletions in a matrix representation require only one constant-time assignment.
+Deleting an edge from a graph stored as a list entails traversal and pointer adjustment.
+Adjacency matrices of unweighted graphs are Boolean matrices, enabling logical matrix operations.
+In bidirectional graphs used in routing, symmetric adjacency matrices facilitate bidirectional search.
+Adjacency lists allow lazy loading in massive sparse graphs, conserving memory.
+For graphs derived from images (like pixel connectivity), adjacency matrices map well onto grids.
+Real-time systems using graphs favor adjacency matrices for deterministic access latency.
+Graphs used in compiler optimization, like dependency graphs, benefit from sparse list representations.
+Adjacency matrices support matrix multiplication-based approaches in pathfinding algorithms.
+Triangle counting in undirected graphs can be performed using matrix trace operations.
+In friendship graphs (social networks), adjacency lists offer scalable neighbor lookup.
+Line graphs, where edges become vertices, often utilize adjacency matrices due to predictable size.
+Hierarchical graphs benefit from list-based structures to allow recursive descent.
+The spectral properties of a graph rely on its adjacency matrix's eigenvalues.
+For parallel BFS traversal, adjacency matrices enable easier division of rows among threads.
+In probabilistic graphs, adjacency matrices can hold transition probabilities in stochastic form.
+Graphs in recommendation systems often use adjacency lists with weights indicating interaction strength.
+Co-occurrence graphs in NLP, being sparse, leverage list structures for scalability.
+A ring graph’s adjacency matrix contains two 1s per row corresponding to immediate neighbors.
+Sparse random graphs with power-law degree distribution suit list representation due to variable vertex degree.
+In adjacency lists, the order of neighbors can influence DFS/BFS traversal behavior.
+Pathfinding in grid graphs benefits from matrix representations where cell-to-cell transition is uniform.
+Adjacency lists facilitate edge iteration needed in Prim’s algorithm for MST on sparse graphs.
+Dense graphs represented with matrices allow full vector-matrix multiplication for parallel computations.
+Directed graphs with self-loops use nonzero diagonal entries in adjacency matrices.
+Label propagation algorithms for community detection require adjacency lists for fast label updates.
+The adjacency matrix representation scales poorly for graphs with millions of vertices.
+Partitioned adjacency lists can model large-scale graphs in distributed systems.
+Adjacency lists are ideal for graphs with high modularity or community structure.
+A wheel graph has a central vertex connected to all nodes, easily represented with lists.
+Adjacency matrices are well-suited for graphs processed in hardware-accelerated environments.
+Nested graph representations, such as hypergraphs, require more than standard list or matrix forms.
+Recursive graphs, like fractal networks, benefit from adjacency lists due to self-similarity.
+Incidence matrices, an alternate to adjacency matrices, represent graphs by associating vertices and edges.
+The adjacency matrix of a bipartite graph has a block structure indicating inter-part connections.
+Directed multigraphs require specialized list entries to account for edge multiplicity and direction.
+Sparse matrix libraries use compressed list-like structures for efficient graph storage.
+Choice between matrix and list directly impacts algorithm complexity, memory usage, and practical runtime for any graph class.

@@ -1,0 +1,80 @@
+In a directed graph, a cycle occurs when a node can reach itself through a directed path.
+A DAG (Directed Acyclic Graph) has no cycles, making it suitable for topological sorting.
+Detecting a cycle in a directed graph involves checking for back edges during DFS traversal.
+In an undirected graph, a cycle exists if a DFS traversal revisits a vertex that is not the direct parent.
+Topological sorting is valid only for DAGs as cycles make the order ambiguous.
+A directed graph with a cycle cannot be topologically sorted due to the circular dependency.
+A DAG enables task ordering where each node appears before its dependents.
+In an undirected graph, cycles are found by checking visited nodes excluding the parent link.
+Cycle detection in a directed graph uses recursion stacks to identify revisit loops.
+A DAG is widely used in dependency resolution systems, like build tools.
+The presence of a cycle in a directed graph suggests there’s no valid execution order.
+In an undirected graph, cycles disrupt the tree-like structure and form loops.
+A DAG is ideal for modeling project workflows or curriculum planning.
+Using DFS on a directed graph, a cycle is found if a node is reached that's already in the recursion stack.
+A DAG allows multiple valid topological sorts depending on dependency structure.
+Undirected graphs require additional tracking to avoid false cycle detections from bidirectional edges.
+In a DAG, topological sorting ensures a consistent order of operations without backtracking.
+Directed graphs require careful cycle detection to maintain order-based computations.
+DAGs are acyclic by design, meaning traversal always moves forward.
+In a directed graph, a cycle indicates that two or more tasks are dependent on each other circularly.
+Undirected graphs often use union-find structures to detect cycles efficiently.
+Cycle detection in a DAG ensures the structure remains valid for linear sorting.
+A directed cyclic graph lacks the acyclicity required for topological analysis.
+A DAG allows deterministic scheduling without the risk of deadlocks.
+In a directed graph, detecting a cycle before topological sorting is essential.
+In undirected graphs, cycles are found through repeated visits of a node not through its parent edge.
+A DAG guarantees that all prerequisites are respected during processing.
+Back edges in a directed graph are key indicators of cycles during DFS.
+In a DAG, in-degrees help identify nodes that can be safely placed first in the sort.
+A directed graph needs to track visited and active states of nodes for cycle detection.
+Topological sort on a DAG provides insight into data flow or execution sequence.
+In undirected graphs, detecting cycles early helps maintain tree structures.
+A DAG does not permit revisiting any previously visited node by a directed path.
+Directed graphs with multiple entry points must check each component for cycles.
+DAGs are useful in designing systems like compiler pipelines.
+Cycle detection helps maintain a valid structure in directed graphs for algorithm use.
+A DAG respects the condition that no node can depend on itself, directly or indirectly.
+Undirected graphs use parent tracking in DFS to differentiate between valid and cyclic revisits.
+In a directed graph, cycle detection avoids runtime issues like infinite loops.
+Topological sorting in a DAG ensures tasks are arranged by dependency.
+Self-loops in directed graphs represent the simplest type of cycle.
+A DAG requires careful design to avoid introducing back edges unintentionally.
+Undirected graphs may form cycles through cross-links between branches.
+In a DAG, every edge moves forward with no opportunity for return.
+Cycle detection allows validation of preconditions in directed graphs.
+Topological order in a DAG is often used to sequence jobs in a processing system.
+A cycle in a directed graph may indicate poor task or dependency design.
+DAGs can be constructed by removing edges that cause cycles.
+Undirected graphs often become cyclic when additional links connect separate branches.
+In a directed graph, cycle detection maintains data correctness in graph-based applications.
+Topological sorting in a DAG is typically done using Kahn’s algorithm or DFS methods.
+Cycle presence in a directed graph implies that no valid task order exists.
+DAGs support acyclic traversals, making them predictable and safe.
+Undirected graphs benefit from cycle detection in networking and routing.
+In a DAG, a valid sort begins with nodes that have no incoming edges.
+Directed graphs must be validated for cycles before applying sequence-based operations.
+A DAG forms a hierarchy with no path loops.
+Detecting cycles in undirected graphs is essential when modeling tree-like structures.
+In a directed graph, cycles can also involve multiple nodes forming a closed loop.
+A DAG can be visualized as a layered structure with dependencies flowing downward.
+Topological sort in a DAG helps in task pipelining where tasks must follow a specific order.
+Cycle detection in a directed graph ensures compliance with data flow restrictions.
+Undirected graphs are considered acyclic if they contain no loops regardless of direction.
+A DAG is essential in scheduling environments like job queues and task managers.
+In directed graphs, failing to detect cycles can lead to logic errors in programs.
+A valid topological sort on a DAG always places parent nodes before children.
+A directed graph can have components with and without cycles.
+DAGs maintain order integrity through topological constraints.
+Cycle detection in undirected graphs prevents redundant path creation.
+Topological sorting in DAGs preserves the structure of parent-child dependencies.
+Directed graphs often need preprocessing to detect and break cycles.
+In DAGs, once a node is processed, it is never revisited.
+A cycle in a directed graph causes feedback paths, disrupting data progression.
+DAGs simplify processing logic due to guaranteed forward-only navigation.
+Cycle detection in directed graphs involves using colors or status flags for nodes.
+A DAG represents a graph with no cycles and with tasks pointing to dependents.
+In a directed graph, a cycle-free state is essential for task dependency graphs.
+Undirected graphs form cycles if redundant paths connect previously connected nodes.
+A DAG ensures that each operation is initiated only after its inputs are ready.
+Topological sorting in DAGs enables efficient multi-stage task execution.

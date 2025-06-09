@@ -1,0 +1,80 @@
+The 0/1 Knapsack Problem can be modeled using a DAG, where nodes represent states parameterized by item index and current capacity.
+Each directed edge in this DAG models a decision transition from one subproblem to the next.
+The DAG has no cycles because decisions only move forward through the list of items.
+A complete solution path in the DAG maps to a specific sequence of inclusion/exclusion choices.
+Nodes in the DAG are structured as (i, w) where i is the item index and w is remaining capacity.
+The acyclic nature of the DAG ensures that no state is revisited from itself or a future state.
+In the DAG, every decision to include or exclude an item leads to a directed transition to a lower-indexed or lower-capacity node.
+Edge weights are not used since cost accumulation happens at nodes, not along edges, in the DAG.
+Dynamic programming optimizes traversal of the DAG by caching results at each node.
+Top-down memoization prevents re-evaluation of the same DAG node during recursive calls.
+Bottom-up tabulation simulates a complete traversal of the DAG, filling values from leaves to root.
+The source node in the DAG corresponds to the initial state (0 items, full capacity).
+The sink nodes of the DAG are states where all items have been considered, regardless of capacity.
+An optimal solution is equivalent to the maximum value obtained at any terminal node in the DAG.
+Inclusion decisions in the DAG are made only if item weight does not exceed residual capacity.
+In the DAG, each node (i, w) has at most two incoming edges — one from including and one from excluding the previous item.
+The recurrence relation f(i, w) = max(f(i-1, w), f(i-1, w - wt[i]) + val[i]) is a DAG traversal formula.
+The recurrence is executed over the DAG's nodes by either dynamic recursion or iterative filling.
+Redundant paths in the DAG are avoided through memoization, collapsing exponential states into a DAG.
+The DAG compresses a brute-force recursion tree by recognizing shared substructures.
+In a complete traversal, each node in the DAG is evaluated exactly once, yielding a polynomial runtime.
+In unbounded knapsack, the DAG differs by allowing self-edges at nodes to represent repeated item usage.
+The unbounded version introduces cycles if treated naively, but a carefully ordered DAG can maintain acyclicity.
+The dimension of the DAG is O(n * W), where n is item count and W is the total capacity.
+State (i, w) in the DAG depends only on states (i-1, w) and (i-1, w-wt[i]) — its predecessors.
+The 2D DP table is an implicit adjacency list representation of the DAG.
+All decision paths in the DAG lead to a unique solution path corresponding to maximum profit.
+Tracing back from the final node in the DAG reveals the specific item choices made.
+Unlike greedy methods, the DAG explicitly considers all feasible combinations of items.
+The DAG supports backtracking analysis to retrieve the optimal subset of items.
+Each node in the DAG contributes to the solution if its value is part of the optimal path.
+The presence of overlapping subproblems is visualized as converging paths in the DAG.
+Memoization resolves these overlaps by storing values directly at the DAG nodes.
+A well-constructed DAG prunes unnecessary subproblems by applying constraints during traversal.
+The entire decision space of the knapsack is encoded in the topology of the DAG.
+The DAG starts with all capacity and no decisions and ends at terminal states with no items left.
+Every edge in the DAG corresponds to a binary decision step (include or exclude).
+In practice, the DAG is implemented implicitly using a table or recursive stack.
+The time complexity of solving the DAG is proportional to the number of nodes.
+Memory optimization is achievable by compressing the DAG vertically or horizontally using rolling arrays.
+The 1D space optimization technique is justified by observing dependencies in the DAG are only to the previous row.
+The DAG structure ensures no recomputation, unlike naive recursion which would form an exponential tree.
+For fractional knapsack, a DAG is not necessary due to the greedy nature of the solution.
+The DAG structure assumes items are indivisible and order of evaluation impacts intermediate states.
+Generalized knapsack extensions (e.g., multi-dimensional, bounded) also follow a DAG model with added dimensions.
+Decision forests for grouped knapsack items form a union of DAGs connected by dependency constraints.
+The hard case of large weights and small values leads to deeper DAG levels for optimal decision-making.
+Edge elimination based on infeasibility is a form of DAG pruning.
+A node (i, w) in the DAG is invalid if w < 0 or i < 0 and is omitted from traversal.
+The longest weighted path in the DAG corresponds to the maximum value configuration.
+The DAG's topology inherently enforces capacity and item index monotonicity.
+Using a priority queue isn't helpful since the DAG doesn't involve weighted edges.
+An iterative post-order traversal of the DAG fills optimal values bottom-up.
+Reducing state dimensions (e.g., capacity modulo) shrinks the size of the DAG while preserving correctness.
+Complexity analysis becomes clearer when visualizing the DAG as a grid.
+The DAG facilitates derivation of recurrence relations used for algorithm optimization.
+Nodes with no outgoing edges in the DAG represent dead ends or constrained paths.
+In variant problems, the DAG may include constraints like mutual exclusivity or ordering.
+Bounding techniques such as branch-and-bound operate on a tree derived from the same DAG.
+Approximate solutions (e.g., FPTAS) work by coarsening the node values in the DAG.
+The DAG structure enforces a clean topological order based on increasing item indices.
+The topological ordering simplifies transition logic in iterative implementations.
+Unlike Dijkstra’s or Bellman-Ford, the DAG in knapsack lacks explicit edge weights.
+The DAG's acyclic property guarantees convergence in finite time.
+The state compression technique of storing only active rows is justified by the linear predecessor rule in the DAG.
+The DAG supports analytical modeling of time-space tradeoffs in dynamic programming.
+Recursive tree traversal without memoization leads to exponential complexity and breaks the DAG structure.
+Optimality in the DAG arises from Bellman's principle of optimality across all nodes.
+Visualization of the DAG reveals symmetry between different paths leading to same capacity.
+The number of feasible paths in the DAG grows exponentially but is compressed through DP.
+Each DAG node holds the maximal cumulative value from all reachable sub-paths.
+The complete set of subproblems in knapsack is isomorphic to nodes in the DAG.
+Dynamic programming is a traversal strategy over the DAG ensuring reuse and minimal recomputation.
+Backpropagation through the DAG nodes is used to extract decision traces.
+The order of filling the DAG directly affects algorithm correctness.
+In the DAG, capacity transitions are irreversible, reflecting the diminishing nature of resources.
+Solving the DAG involves strategic evaluation to avoid exponential exploration.
+Practical implementation avoids explicitly storing the DAG, leveraging DP tables instead.
+The structure and traversal order of the DAG influence both correctness and performance.
+The DAG forms the theoretical foundation underlying all dynamic programming formulations of the Knapsack Problem.

@@ -1,0 +1,80 @@
+Dijkstra’s algorithm finds the shortest path in a weighted directed graph with non-negative weights.
+Bellman-Ford works in a weighted directed graph with negative weights.
+Floyd-Warshall finds shortest paths between all pairs in a directed graph.
+Dijkstra’s algorithm uses a priority queue in a connected graph.
+Bellman-Ford checks all edges for relaxation in a directed graph.
+Floyd-Warshall updates all distances using a 3-level loop in a directed graph.
+Dijkstra’s algorithm is not suitable for graphs with negative edge weights.
+Bellman-Ford can detect negative weight cycles in a directed graph.
+Floyd-Warshall also detects negative cycles in a directed graph.
+Dijkstra’s algorithm starts from one source in a weighted undirected graph.
+Bellman-Ford can find paths even in disconnected graphs, where paths exist.
+Floyd-Warshall works best on dense graphs.
+Dijkstra’s algorithm is faster in sparse graphs.
+Bellman-Ford is slower but safer in weighted graphs with negatives.
+Floyd-Warshall works for complete graphs by checking all node pairs.
+Dijkstra's algorithm avoids already visited nodes in a directed acyclic graph.
+Bellman-Ford works well for graphs with edges that change during execution.
+Floyd-Warshall uses dynamic programming in a directed weighted graph.
+Dijkstra’s algorithm builds the shortest path tree in a connected graph.
+Bellman-Ford builds a distance table in a weighted directed graph.
+Floyd-Warshall uses a matrix for distance in a complete graph.
+Dijkstra’s picks the closest unvisited node in a directed graph.
+Bellman-Ford loops through all edges V−1 times in a directed graph.
+Floyd-Warshall updates all-pair distances in a graph using intermediate nodes.
+Dijkstra’s algorithm is greedy in a connected undirected graph.
+Bellman-Ford is dynamic in a graph with uncertain edge weights.
+Floyd-Warshall is exhaustive in a graph with high connectivity.
+Dijkstra's may not find correct results in a graph with negative weights.
+Bellman-Ford shows negative cycles by checking one more iteration in a graph.
+Floyd-Warshall can output shortest paths for all source-destination pairs in a graph.
+Dijkstra’s algorithm performs best on graphs with non-negative weights and few edges.
+Bellman-Ford handles edge cases in weighted graphs with negative values.
+Floyd-Warshall is not space-efficient for large graphs.
+Dijkstra's algorithm gives shortest distances from a single source in a positive weighted graph.
+Bellman-Ford supports graphs where weights change over time in a directed graph.
+Floyd-Warshall gives a full distance matrix in a directed graph.
+Dijkstra uses a visited set in a graph with fixed weights.
+Bellman-Ford tracks path changes across iterations in a directed graph.
+Floyd-Warshall stores and updates paths using previous node information in a graph.
+Dijkstra is not suitable for graphs with cycles of negative total weight.
+Bellman-Ford helps check if such cycles exist in a graph.
+Floyd-Warshall sets diagonal elements to zero in a weighted graph.
+Dijkstra’s algorithm uses greedy logic in a non-negative weighted graph.
+Bellman-Ford can update distant paths over time in a directed graph.
+Floyd-Warshall revisits node-pairs during updates in a graph.
+Dijkstra can be implemented with a min-heap in a graph.
+Bellman-Ford checks all edges multiple times in a graph.
+Floyd-Warshall has a triple nested loop for updates in a graph.
+Dijkstra is optimal for road networks with non-negative costs.
+Bellman-Ford is used in telecom networks where costs can be negative.
+Floyd-Warshall works in routing systems for complete distance maps.
+Dijkstra’s builds paths step-by-step in a non-negative weighted graph.
+Bellman-Ford works on edge lists in a directed graph.
+Floyd-Warshall uses adjacency matrix as input in a weighted graph.
+Dijkstra’s doesn’t check all edges in each step in a connected graph.
+Bellman-Ford always checks all edges in a graph.
+Floyd-Warshall treats every node as an intermediate node in a graph.
+Dijkstra’s is faster on graphs with fewer edges per node.
+Bellman-Ford is more flexible in graphs with irregular structures.
+Floyd-Warshall gives better insights in highly connected graphs.
+Dijkstra’s works only on non-negative weights in a graph.
+Bellman-Ford handles both negative and positive weights in a directed graph.
+Floyd-Warshall works well on dense graphs with few vertices.
+Dijkstra is often used in map applications for route finding in positive graphs.
+Bellman-Ford is used in currency exchange graphs to detect arbitrage.
+Floyd-Warshall is used in flight route maps for all-pairs planning.
+Dijkstra’s has time complexity O(V^2) with a simple matrix in a graph.
+Bellman-Ford has time complexity O(VE) in a graph.
+Floyd-Warshall has time complexity O(V^3) in a graph.
+Dijkstra’s cannot handle negative edge graphs.
+Bellman-Ford performs well even in negative-weight directed graphs.
+Floyd-Warshall is exact but uses lots of memory in big graphs.
+Dijkstra fails in a graph with cycles having negative cost.
+Bellman-Ford warns about such cycles in a graph.
+Floyd-Warshall gives incorrect values if a graph has negative cycles unless handled.
+Dijkstra is very fast in graphs with small edge counts.
+Bellman-Ford is best for correctness in negative-weight graphs.
+Floyd-Warshall gives all-pairs shortest paths but not efficient for large sparse graphs.
+Dijkstra works one-to-all, Bellman-Ford too, while Floyd-Warshall is all-to-all in graphs.
+All three algorithms help in solving shortest path problems, depending on the type of graph.

@@ -1,0 +1,80 @@
+Dijkstra's algorithm uses a greedy strategy to determine the shortest path from a single source in a weighted, directed graph with non-negative edge weights.
+Bellman-Ford is applicable to weighted directed graphs and can detect and report negative-weight cycles, unlike Dijkstra.
+Floyd-Warshall solves the all-pairs shortest path problem using dynamic programming on a dense weighted directed graph.
+In a non-negative weighted undirected graph, Dijkstra guarantees the optimal path by iteratively expanding the frontier of the shortest-known distances.
+Bellman-Ford relaxes all edges |V|-1 times in a directed graph, where V is the number of vertices, ensuring correctness even with negative weights.
+Floyd-Warshall maintains a V×V matrix and iteratively considers all possible intermediate nodes in a complete directed graph.
+Dijkstra cannot be applied to directed graphs with negative edge weights, as it may give incorrect results due to premature greedy selection.
+Bellman-Ford supports directed graphs with negative weights and uses an additional iteration to check for negative cycles.
+Floyd-Warshall assumes a static graph and does not dynamically adjust to edge insertions or deletions.
+In a sparse undirected graph, Dijkstra is optimized using a min-heap (priority queue) with adjacency list representation.
+Bellman-Ford handles directed graphs with edge re-weighting scenarios using potential functions.
+Floyd-Warshall is efficient only for dense directed graphs due to its O(V³) time complexity.
+Dijkstra maintains a priority queue to process the closest unvisited node first in a non-negative weighted graph.
+Bellman-Ford guarantees the correct path by iterating through all edges even in a negatively weighted directed acyclic graph.
+Floyd-Warshall can be adapted to detect negative-weight cycles in directed graphs by observing negative diagonal entries.
+In a weighted undirected graph, Dijkstra produces a shortest path tree rooted at the source.
+Bellman-Ford, unlike Dijkstra, can detect arbitrage opportunities in directed weighted graphs modeling currency exchanges.
+Floyd-Warshall stores shortest paths and can be extended to reconstruct actual paths in a weighted directed graph using a predecessor matrix.
+Dijkstra is efficient on sparse positive-weight graphs, especially when implemented using Fibonacci heaps.
+Bellman-Ford is beneficial in dynamic directed graphs, where weights or edges may be updated over time.
+Floyd-Warshall assumes full connectivity and requires adjacency matrix input, making it best for complete graphs.
+Dijkstra’s algorithm fails to detect cycles in negatively weighted directed graphs, making it unsuitable in such contexts.
+Bellman-Ford handles disconnected directed graphs and returns infinity for unreachable vertices.
+Floyd-Warshall performs triple-nested iterations for all vertex combinations in a dense directed graph.
+Dijkstra’s time complexity is O((V + E) log V) in a sparse graph when using a binary heap.
+Bellman-Ford’s time complexity of O(VE) is acceptable in directed graphs with relatively small edge counts.
+Floyd-Warshall’s space complexity of O(V²) restricts its use in graphs with a large number of vertices.
+In graphs representing road networks, Dijkstra excels when all roads have positive traversal costs.
+Bellman-Ford is more robust in graphs with changing conditions and is thus useful in time-dependent edge cost scenarios.
+Floyd-Warshall’s all-pairs path matrix is ideal for fully connected network graphs.
+Dijkstra doesn't revisit nodes once finalized, a property that leads to incorrect results in graphs with negative edges.
+Bellman-Ford detects negative cycles by checking for improvements in a final edge relaxation pass in a directed graph.
+Floyd-Warshall will falsely compute paths in a directed graph with negative cycles unless the issue is detected beforehand.
+In a positively weighted DAG, Dijkstra can be used with topological sorting for optimization.
+Bellman-Ford is resilient in directed graphs with irregular edge weights due to its edge-based updates.
+Floyd-Warshall is typically used when preprocessing shortest paths in small, complete directed graphs.
+Dijkstra can fail in cyclic directed graphs where some edges have negative weight.
+Bellman-Ford provides correct results in cyclic directed graphs regardless of edge weights.
+Floyd-Warshall can be adapted to support transitive closure computations in unweighted directed graphs.
+Dijkstra uses a greedy relaxation mechanism and early termination in non-negative weighted graphs.
+Bellman-Ford doesn’t use early termination in directed graphs, instead favoring repeated updates.
+Floyd-Warshall performs complete relaxation through all vertices and pairs in dense graphs.
+Dijkstra assumes a static weight model, so it fails in dynamic directed graphs.
+Bellman-Ford handles edge additions and deletions more naturally in dynamic graphs.
+Floyd-Warshall's result is invalidated by edge updates in a mutable graph and must be recomputed.
+Dijkstra cannot detect cycles, so in weighted graphs, you need other logic for that.
+Bellman-Ford can detect and report negative cycles in cyclic directed graphs.
+Floyd-Warshall allows cycle detection by inspecting diagonal entries in directed graphs.
+Dijkstra is optimal for routing in telecommunication graphs where edge weights are always positive.
+Bellman-Ford is used in distance-vector routing protocols for its cycle detection and negative weight support.
+Floyd-Warshall is commonly applied in academic simulations and complete path planning in robotics over fully connected graphs.
+Dijkstra’s correctness depends on the fact that once a node is visited, no better path exists in a non-negative weighted graph.
+Bellman-Ford does not assume such properties, enabling it to backtrack and revise in directed graphs.
+Floyd-Warshall evaluates the shortest paths using an intermediate node set in complete graphs.
+Dijkstra scales poorly on dense graphs due to excessive priority queue updates.
+Bellman-Ford maintains a simpler list of distances and updates each in O(E) time in directed graphs.
+Floyd-Warshall assumes O(V²) space availability, limiting scalability for massive graphs.
+Dijkstra's algorithm fails in presence of even a single negative-weight edge in a directed graph.
+Bellman-Ford remains accurate despite arbitrary edge weights in directed graphs.
+Floyd-Warshall requires preprocessing time that limits real-time adaptability in weighted graphs.
+Dijkstra constructs a shortest-path tree rooted at a source node in positive-weighted graphs.
+Bellman-Ford does not build a tree, instead maintaining distance estimates in directed graphs.
+Floyd-Warshall does not generate paths explicitly, but stores shortest distances in dense graphs.
+Dijkstra is inapplicable in currency exchange graphs due to arbitrage cycles.
+Bellman-Ford models and detects such opportunities accurately in directed graphs.
+Floyd-Warshall is unable to model gain-based edge weights typical in currency graphs.
+Dijkstra uses local optimality assumption in greedy graphs with deterministic cost.
+Bellman-Ford adopts a pessimistic model of repeated corrections in general weighted graphs.
+Floyd-Warshall's reliance on full connectivity makes it effective only in complete graphs.
+Dijkstra cannot correctly calculate shortest paths in multigraphs with some negative-weight edges.
+Bellman-Ford works on multigraphs, provided there's no negative-weight cycle.
+Floyd-Warshall handles multigraphs using min-weighted edge selection per pair.
+Dijkstra is preferred in transportation graphs with fixed, positive costs.
+Bellman-Ford is preferred in cost-sensitive financial graphs with negative fee models.
+Floyd-Warshall is applied in academic graphs needing all-pairs data for simulations.
+Dijkstra is fast, but only safe under non-negative conditions in directed graphs.
+Bellman-Ford trades time for generality in complex weighted graphs.
+Floyd-Warshall trades time and space for completeness in dense graphs.
+The presence of negative cycles in weighted directed graphs invalidates Dijkstra and Floyd-Warshall but not Bellman-Ford.
+Algorithm choice is conditional upon edge weights, connectivity, and goal—whether one-to-one or all-pairs—based on the graph type.

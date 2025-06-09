@@ -1,0 +1,80 @@
+The Coin Change problem can be modeled as a shortest path problem on a Directed Acyclic Graph (DAG) where each node represents an achievable amount.
+In this DAG, nodes from 0 to amount represent states, and directed edges simulate coin transitions.
+A node u in the DAG connects to v = u + c for each coin c, forming forward-only edges.
+This graph remains acyclic due to strictly increasing transitions, a property inherent to the DAG structure.
+Each coin denomination contributes to multiple outgoing edges from every reachable node in the DAG.
+The graph starts from the source node 0, which has zero cost and is the root of the DAG.
+Transitions between nodes in the DAG reflect state transformations via addition of coin denominations.
+Since the state transition never revisits lower nodes, cycles are inherently avoided in this DAG.
+Each edge in the DAG represents a constant-weight operation of adding a coin’s value.
+The solution to Coin Change corresponds to the shortest path from node 0 to amount in this DAG.
+Top-down DP with memoization implicitly traverses this DAG via recursive backward edges.
+Bottom-up DP explicitly simulates BFS over this DAG by iterating through increasing amounts.
+The DAG structure guarantees well-ordered dependency resolution since each state depends only on smaller states.
+Every state in the DAG aggregates optimal transitions from its predecessors, forming optimal substructures.
+The recurrence relation mimics dynamic traversal through the DAG, exploring all viable paths.
+Edge relaxation in the DAG involves updating the state cost based on incoming transitions.
+Since all edge weights are uniform, this DAG does not require priority queues like in Dijkstra’s.
+The in-degree of each node in the DAG equals the number of coins that can form it.
+If no coins can reach a node, that node in the DAG remains disconnected and marked unreachable.
+Path enumeration in the DAG corresponds to counting the number of valid coin combinations.
+A topological sort of the DAG aligns with increasing amount values in bottom-up DP.
+Reverse transitions in a top-down approach follow edges from amount to amount - coin, within the same DAG.
+The Coin Change graph can also be seen as a leveled DAG where each level represents a step count.
+In the coin permutation variant, the DAG becomes more densely connected, allowing more distinct paths to each node.
+For counting solutions, node values in the DAG store the number of incoming paths.
+This creates a distinction in the DAG between optimization-based traversal and enumeration-based traversal.
+Coin constraints such as bounded usage restrict edge multiplicity in the DAG.
+The DAG expansion factor is directly proportional to the number of coins and their relative values.
+Using BFS on the DAG, each state can be visited once with early stopping on reaching amount.
+Early pruning in the DAG removes transitions that lead to out-of-bound values or exceed the amount.
+Each node i in the DAG has transitions to i + c for all c in coins where i + c <= amount.
+The uniform cost of edges allows the DAG to be processed layer-by-layer without needing dynamic reordering.
+If state i is unreachable, then the node i in the DAG has no predecessors and should hold infinity.
+A zero-initialized node in the DAG implies base case satisfaction, such as amount 0.
+The problem assumes that coins can be used infinitely, so the DAG has repeated self-originating transitions.
+Cycles are impossible in this DAG due to monotonically increasing state transitions.
+The DAG effectively spans all reachable states from the initial node using valid transitions.
+The optimal number of coins for a given amount is the shortest path length to that node in the DAG.
+If backtracking is needed, we can annotate edges in the DAG with the coin used to reach each node.
+The edge list of this DAG can be compressed using a 1D array and modulo operations for optimization.
+All state transitions are deterministic and constant time per coin in the DAG.
+For dense coin sets, the DAG becomes dense with edge count proportional to amount * coins.length.
+Sparse coin sets lead to a DAG with limited transitions and lower memory overhead.
+Traversal in the DAG stops naturally once the amount node is reached or all transitions are exhausted.
+Traceability in the DAG helps recover actual coin combinations that construct the optimal solution.
+In the weighted coin variant, each edge in the DAG carries an associated cost beyond uniform transitions.
+The transition cost could be weighted by physical coin constraints or denomination priorities in the DAG.
+Enumeration of paths in the DAG must account for overlapping subpaths using memoization.
+In combination mode, the outer loop over coins ensures the DAG is processed in coin-order hierarchy.
+In permutation mode, the inner loop over coins yields all sequence variants for the DAG transitions.
+Every node update in the DAG represents a DP state re-evaluation based on recent transitions.
+For large target amounts, efficient construction of the DAG ensures polynomial time complexity.
+The DAG approach fits into the class of single-source unweighted reachability problems.
+The number of distinct paths to a node in the DAG equals the number of ways to form that amount.
+Pruning unreachable states early reduces the effective size of the DAG significantly.
+Since the DAG has only forward transitions, topological ordering is trivially defined.
+Reverse DP on the DAG is useful in reconstructing paths or handling bounded coin use.
+Each node’s final value in the DAG results from a min-reduce or sum-reduce over predecessor paths.
+Memoization acts as a cache over the DAG traversal to prevent exponential recomputation.
+Visualization of the DAG exposes patterns in coin dependencies and amount gaps.
+For coins with GCD > 1, some nodes in the DAG remain permanently unreachable.
+Edge failures in the DAG highlight infeasible subproblems due to incompatible coin denominations.
+DP table updates correspond directly to edge relaxations in the DAG.
+Dynamic programming is merely a means of performing shortest path computations over this DAG.
+Since the DAG is acyclic, all computations are guaranteed to terminate.
+Space optimization techniques leverage the linear structure of the DAG to reuse memory efficiently.
+Redundant updates in the DAG are avoided through pre-checks on DP values.
+A BFS over the DAG from node 0 yields the minimal steps required to form any amount.
+In a modified DAG, edge weights can vary based on contextual penalties or rewards.
+Multi-source BFS is possible if we begin from all coin values directly in the DAG.
+Dynamic programming solutions form an implicit traversal of the DAG without materializing edges.
+The node amount may be unreachable in the DAG if the coin set has gaps in coverage.
+The acyclic nature of the DAG means we never need cycle detection or infinite loop guards.
+The DAG can be unrolled into a table, but the underlying graph semantics persist.
+Every entry in the DP table corresponds to a node in the DAG with an associated cost.
+Early stopping in BFS or DP helps terminate traversal of the DAG once the goal is met.
+Backward traversal of the DAG can yield all possible coin paths by recursively unwinding transitions.
+The shortest path tree over the DAG reveals the most efficient construction sequence for any state.
+The mathematical properties of the DAG enable strong guarantees on correctness and completeness.
+This makes Coin Change one of the canonical problems demonstrating DAG-based dynamic programming formulations.

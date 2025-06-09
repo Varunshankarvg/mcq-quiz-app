@@ -1,0 +1,15 @@
+Concept Clarified
+The sliding window mechanism thrives when iterating through sequences to find optimal segments without redundant computations.
+Whether fixed or elastic in size, this approach cleverly retains state while moving through data linearly.
+
+2. Problem Applications
+Longest Substring Without Repeats: Grow the window while tracking characters; shrink when repetition is found.
+Smallest Subarray with Sum ≥ X: Dynamically adjust the range while maintaining the total.
+Max Consecutive Ones (One Flip): Strategically allow one zero to flip while monitoring the max ones.
+String Permutation Match: Keep track of a sliding frequency map to match with the target string.
+Substring with ≤ K Distinct Characters: Use a hash map to track distinct entries and size of the window.
+Longest Subarray Sum ≤ K: Expand or shrink the window based on cumulative totals and constraints.
+
+3. Time & Edge Cases
+Sliing window problems usually yield O(N) performance, though O(N log N) may arise with sorted structures or extra lookups.
+Pay attention to constraints like negatives, character limits, and window expansion logic.

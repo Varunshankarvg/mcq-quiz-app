@@ -1,0 +1,80 @@
+Prim’s algorithm works on a connected weighted undirected graph.
+Kruskal’s algorithm is used on a connected weighted undirected graph.
+A minimum spanning tree connects all vertices in a connected graph with the least total weight.
+Prim’s algorithm starts from a vertex and grows the MST step-by-step in a connected undirected graph.
+Kruskal’s algorithm sorts all edges and picks the smallest edges in a connected undirected graph.
+A minimum spanning tree never contains a cycle in a connected undirected graph.
+Prim’s algorithm always maintains one tree that grows in a connected weighted graph.
+Kruskal’s algorithm can work well even when the graph has many disconnected components initially.
+Both Prim’s and Kruskal’s algorithms assume the graph is undirected and weighted.
+A minimum spanning tree in a connected undirected graph with n vertices has exactly n−1 edges.
+Prim’s algorithm selects the nearest vertex not yet in the MST from a connected graph.
+Kruskal’s algorithm avoids cycles while adding edges to the MST in a connected graph.
+In dense graphs, Prim’s algorithm performs better using a priority queue.
+In sparse graphs, Kruskal’s algorithm is often faster due to fewer edges.
+A complete graph has many possible spanning trees, but the MST has the least weight.
+Prim’s algorithm requires a way to keep track of visited vertices in a connected graph.
+Kruskal’s algorithm uses union-find to avoid cycles in a connected graph.
+Prim’s algorithm keeps growing the same component in a connected undirected graph.
+Kruskal’s algorithm allows edges between any two components in a connected undirected graph.
+Prim’s algorithm adds edges one at a time in a connected weighted graph.
+Kruskal’s algorithm may pick edges far apart in the connected graph.
+The goal is to connect all nodes with minimum total cost in a connected graph.
+A cyclic graph can be reduced to an MST by removing some edges.
+A tree graph is already a minimum spanning tree if it's connected and has no cycles.
+If a graph is not connected, there is no MST.
+Prim’s algorithm is similar to Dijkstra’s algorithm in connected graphs.
+Kruskal’s algorithm doesn’t care about starting point in the connected graph.
+Prim’s algorithm depends on a priority queue to select the smallest edge in a connected graph.
+Kruskal’s algorithm sorts edges globally in a connected undirected graph.
+MST helps reduce wiring cost in network design graphs.
+MST is useful for designing road maps in geographical graph models.
+Prim’s algorithm can be implemented using arrays or heaps in a connected graph.
+Kruskal’s algorithm benefits from efficient sorting in sparse graphs.
+Each added edge in Kruskal’s algorithm connects two different trees in a connected graph.
+Prim’s algorithm starts with one node and adds safe edges in a connected graph.
+MST is unique if all edge weights in a connected graph are different.
+Kruskal’s algorithm helps visualize graph growth by components in a connected graph.
+Prim’s algorithm builds the MST like a flood fill in a connected undirected graph.
+Kruskal’s algorithm can be stopped early if n−1 edges are added in a connected graph.
+Prim’s algorithm grows outward from a source vertex in a weighted undirected graph.
+A graph with equal weight edges may have multiple MSTs with the same total weight.
+Kruskal’s algorithm often uses disjoint set union in a connected graph.
+Prim’s algorithm uses visited flags to avoid cycles in a connected graph.
+MST must cover all vertices in a connected undirected graph.
+Prim’s and Kruskal’s always give the same result in a connected graph if weights are unique.
+Kruskal’s algorithm doesn’t depend on the shape of the connected graph.
+Prim’s algorithm's performance depends on how edges are accessed in the graph.
+Kruskal’s algorithm may add long edges if they are necessary in the connected graph.
+MST is not defined in a directed graph.
+A weighted cyclic graph can be simplified to an MST by dropping higher-weight edges.
+In a grid graph, MST helps minimize path networks.
+A social network graph can use MST to build community backbones.
+Prim’s algorithm selects minimum edge weight among all adjacent ones in a connected graph.
+Kruskal’s algorithm begins with all nodes separate in the connected graph.
+MST connects all islands of a geographical graph efficiently.
+Both Prim’s and Kruskal’s are greedy algorithms in connected graphs.
+In a weighted undirected tree, removing one edge increases components.
+MST keeps the total weight smallest in any connected undirected graph.
+The same connected graph can have multiple valid MSTs if weights are tied.
+Kruskal’s algorithm may need cycle detection for large connected graphs.
+MST construction is deterministic for unique weights in a connected graph.
+MST preserves reachability across all vertices in a connected graph.
+Edge weights in a connected graph guide MST building decisions.
+MST avoids redundant connections in mesh graphs.
+A circuit graph is converted to MST by removing the longest edge.
+MST cannot be formed from a disconnected graph.
+A fully connected graph has many edge choices for Prim’s or Kruskal’s.
+MST saves cost in laying pipelines across a utility network graph.
+MST helps reduce infrastructure costs in communication network graphs.
+Prim’s algorithm adds edges one by one near the current tree in a connected graph.
+Kruskal’s algorithm may choose distant edges early in a connected graph.
+Prim’s algorithm can be paused and resumed using a priority queue in a connected graph.
+Kruskal’s algorithm halts after adding n−1 edges in a connected graph.
+MST is a subgraph of the original connected graph.
+Edge weights in a graph affect both Prim’s and Kruskal’s edge selection.
+MST always includes all vertices in a connected undirected graph.
+MST improves efficiency in energy distribution graphs.
+Prim’s algorithm resembles flood filling a connected graph.
+Kruskal’s algorithm forms the MST from smallest edges first in a connected graph.
+In real-world transportation graphs, MST ensures minimal routes to cover all cities.

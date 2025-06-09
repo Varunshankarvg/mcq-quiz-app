@@ -1,0 +1,57 @@
+Pattern matching is used to find occurrences of a pattern within a larger text.
+KMP (Knuth-Morris-Pratt) improves pattern matching by avoiding redundant comparisons.
+Rabin-Karp is a hashing-based algorithm that uses rolling hashes for efficient pattern searching.
+KMP preprocesses the pattern to create a partial match table, which helps avoid backtracking.
+Rabin-Karp calculates a hash value for substrings and compares them with the target pattern.
+KMP uses a failure function to skip over unnecessary checks when a mismatch occurs.
+Rabin-Karp compares hash values instead of characters, speeding up the pattern matching process.
+In KMP, each character in the text is compared only once, ensuring faster matching.
+Rabin-Karp is especially useful when multiple patterns need to be matched in a single scan.
+KMP guarantees linear time complexity for matching a single pattern.
+Rabin-Karp is slower in the worst case due to hash collisions, but it is very efficient for multiple patterns.
+To implement KMP, we first preprocess the pattern into a partial match table, which improves search efficiency.
+Rabin-Karp’s rolling hash function computes hash values for substrings and updates them dynamically.
+For single-pattern matching, KMP is usually faster than Rabin-Karp, especially when the pattern has repeating characters.
+Rabin-Karp allows multiple pattern matching by using hash functions for each pattern in the search.
+KMP skips over characters that have already been matched, which makes it faster than brute-force methods.
+Rabin-Karp’s rolling hash is ideal for handling long texts, as it avoids recalculating hash values for every substring.
+In both KMP and Rabin-Karp, preprocessing significantly improves the matching speed.
+For small texts, brute force might still be used, but for larger texts, KMP and Rabin-Karp are far more efficient.
+In KMP, the partial match table ensures that the search phase runs in linear time, even in the worst case.
+Rabin-Karp works by comparing hash values rather than characters, which speeds up the matching process in some cases.
+In both algorithms, matching is done by comparing the current substring to the pattern, and mismatches lead to skipping sections of the text.
+Rabin-Karp is efficient when dealing with large datasets or searching multiple patterns in one pass.
+KMP is best used when the pattern is reused many times in a search, such as in repeated text processing.
+Rabin-Karp handles cases where patterns might overlap by comparing hashes of substrings of the text.
+Pattern matching can be done efficiently by using the KMP algorithm, which avoids revisiting already checked portions of the text.
+Rabin-Karp performs well when patterns are unique and hash collisions are minimal.
+In the KMP algorithm, mismatches are handled with a failure function, which prevents unnecessary backtracking.
+Rabin-Karp compares multiple substrings at once by using a rolling hash and checking hash values against the pattern.
+KMP and Rabin-Karp improve upon brute-force methods by significantly reducing the number of comparisons made.
+KMP avoids unnecessary character checks by skipping over sections of the text that have already been matched.
+Rabin-Karp computes a hash for every substring and compares them with the hash of the pattern, speeding up the matching process.
+For text with many repeated characters, KMP is efficient because it uses the failure function to avoid repeating work.
+When using Rabin-Karp, hash values are computed using modular arithmetic, which makes comparisons faster.
+KMP ensures that the text is only traversed once, making it optimal for single-pattern matching.
+Rabin-Karp checks the hash value of each substring in the text, which works well when there are fewer hash collisions.
+KMP’s preprocessing step takes time but ensures that the actual pattern matching phase is very fast.
+Rabin-Karp is ideal for finding multiple patterns in a text by calculating the hash for each pattern.
+In applications where the pattern changes dynamically, KMP is an efficient option because it preprocesses the pattern once.
+Rabin-Karp’s efficiency increases when many patterns are being matched in the same text, reducing the number of comparisons.
+KMP is more efficient than brute force because it skips unnecessary comparisons using a precomputed table.
+Rabin-Karp can handle multiple patterns efficiently by comparing their hash values simultaneously.
+KMP handles worst-case scenarios better than brute-force algorithms because it avoids re-examining previously matched characters.
+Rabin-Karp’s hashing technique allows for faster pattern detection in large texts, particularly when the pattern appears many times.
+KMP ensures that mismatches are handled by shifting the pattern efficiently based on a failure function.
+For repeated patterns, KMP is particularly fast because it processes the text in linear time without redundant checks.
+Rabin-Karp can handle long texts with few patterns by computing hash values for each substring quickly.
+KMP is useful for finding a pattern in a string when the pattern is fixed, and the text is variable.
+Rabin-Karp is often used for bioinformatics and plagiarism detection where multiple patterns need to be found in large datasets.
+Both KMP and Rabin-Karp are faster than brute-force algorithms for matching patterns in long strings.
+KMP’s linear time complexity is ideal for tasks where a single pattern is being matched in a long text.
+Rabin-Karp uses hash functions to check for pattern matches in a more efficient manner than checking each character.
+For matching DNA sequences, Rabin-Karp is efficient because it can check for multiple sequence matches simultaneously.
+Rabin-Karp is best used when there are multiple patterns to search for within the same text.
+KMP is typically faster for single pattern searches in large texts due to its preprocessing step.
+Rabin-Karp computes hash values dynamically, which makes it a good choice for applications where multiple patterns change often.
+Rabin-Karp is commonly used in applications that need to match substrings of the text with multiple patterns.

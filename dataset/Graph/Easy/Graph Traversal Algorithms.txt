@@ -1,0 +1,80 @@
+In an undirected graph, BFS visits all nearby nodes first.
+DFS in a directed graph explores as far as possible before backtracking.
+BFS uses a queue to traverse a connected graph level by level.
+DFS uses a stack or recursion to go deep in a directed graph.
+In an undirected graph, BFS helps find the shortest path in terms of edges.
+DFS in an undirected graph can be used to detect cycles.
+In a directed graph, BFS visits all neighbors of a node before moving deeper.
+DFS works well in a cyclic graph when cycle detection is needed.
+In a connected graph, BFS ensures all nodes are reached from the start node.
+DFS may miss nodes in a disconnected graph unless called for each component.
+BFS in a directed graph follows the direction of edges.
+DFS in a directed graph is useful for topological sorting.
+BFS explores the graph in layers in an unweighted graph.
+DFS goes down each path fully before returning in a tree-like graph.
+BFS is used in grid graphs to find the shortest path.
+DFS can help in checking if a graph is bipartite.
+BFS is good for solving puzzles modeled as graphs.
+DFS can lead to stack overflow in large dense graphs.
+BFS in a sparse graph runs faster due to fewer edges.
+DFS is faster for solving maze problems in a grid graph.
+BFS is useful in level-order traversal of a tree graph.
+DFS is similar to pre-order traversal in a tree graph.
+BFS can find connected components in an undirected graph.
+DFS can find articulation points in an undirected graph.
+In a weighted graph, BFS doesn't give the shortest path in terms of weight.
+In a directed acyclic graph (DAG), DFS helps in topological order.
+BFS is used in social network analysis modeled as graphs.
+DFS is useful for finding strongly connected components in a directed graph.
+BFS finds the minimum steps to reach a node in an unweighted graph.
+DFS helps in checking the existence of a path in a directed graph.
+BFS visits neighbors level by level in an adjacency list graph.
+DFS can get stuck in a cycle in a cyclic graph without visited tracking.
+BFS needs more memory in a broad graph due to queue storage.
+DFS is memory efficient in a deep graph.
+BFS and DFS both can be used on a maze graph.
+DFS is good at exploring components of a disconnected graph.
+BFS is used in tree graphs to check if they are complete.
+DFS can check if a graph has a cycle.
+BFS can be used to find levels in a directed graph.
+DFS is used to generate a DFS tree in a graph.
+In a graph, BFS discovers all nodes at distance 1 before moving to distance 2.
+DFS works by going as deep as possible in a directed graph.
+BFS can check if a graph is bipartite using alternate coloring.
+DFS can be modified to track timestamps in a directed graph.
+BFS in a simple graph ensures no node is visited twice.
+DFS uses a recursive call stack in a connected graph.
+BFS handles wide graphs better than DFS in terms of depth.
+DFS handles narrow and deep graphs better.
+BFS is not ideal for infinite or very large graphs.
+DFS may not always find the shortest path in a graph.
+In dense graphs, BFS can be slower due to more edges.
+DFS can help in topological sorting in a DAG.
+BFS can be applied to a binary tree graph for level-order traversal.
+DFS in a tree gives pre-order, in-order, or post-order traversals.
+BFS helps check connectivity in an undirected graph.
+DFS detects back edges in a directed graph, which may mean a cycle.
+BFS helps in solving word ladder problems modeled as graphs.
+DFS is often used for solving puzzles like Sudoku as a graph.
+BFS can be used in multi-source shortest path in grid graphs.
+DFS helps in coloring problems in graph theory.
+BFS tracks distance from the source in an unweighted graph.
+DFS works well in scenarios requiring full graph exploration.
+BFS requires a queue for level management in a graph.
+DFS uses a stack or recursive calls in graphs.
+BFS is good for finding shortest paths in unweighted graphs.
+DFS helps in cycle detection in directed graphs.
+BFS and DFS both require visited tracking in cyclic graphs.
+BFS can be stopped early when the goal node is found.
+DFS may need to explore all nodes to find the goal.
+BFS uses more memory when the graph has many branches.
+DFS has low memory usage in linear or narrow graphs.
+BFS performs poorly in very deep graph trees.
+DFS performs poorly in very wide graphs.
+BFS gives shortest path in edge count, not weight.
+DFS may follow a longer path than needed.
+In disconnected graphs, BFS finds separate components.
+DFS is commonly used in solving logical puzzles in graphs.
+BFS is level-based and systematic in graph traversal.
+DFS is depth-based and recursive in graph traversal.
+BFS and DFS are fundamental for exploring and analyzing all graph types.

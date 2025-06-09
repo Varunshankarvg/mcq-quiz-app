@@ -1,0 +1,80 @@
+Longest Increasing Subsequence (LIS) is the problem of determining the maximal-length subsequence in which every subsequent element is strictly greater than its predecessor.
+Unlike substrings, LIS deals with non-contiguous subsequences preserving relative order.
+The problem exhibits optimal substructure and overlapping subproblems, making it suitable for dynamic programming.
+For every element in the sequence, we must assess the LIS terminating at that index by scanning all previous valid LIS extensions.
+Define dp[i] as the length of LIS ending at index i; initialize all dp[i] = 1.
+For each i, we check every j < i and update dp[i] = max(dp[i], dp[j] + 1) if arr[i] > arr[j].
+The final LIS is max(dp[i]) over all i.
+This brute-force DP approach has O(n²) time complexity and O(n) space.
+An optimized method employs patience sorting combined with binary search to reach O(n log n) complexity.
+Maintain a tails array where tails[i] stores the minimum possible tail value of an increasing subsequence of length i+1.
+The tails array does not hold the actual LIS, but its length equals the LIS length.
+Elements in tails are updated using binary search for efficiency, maintaining minimal tail values.
+This greedy approach ensures the longest subsequence grows with optimal tail values, preserving correctness.
+To reconstruct the LIS in O(n log n), one must store predecessor indices while updating tails.
+The LIS problem can be mapped to a Directed Acyclic Graph (DAG), where edges exist from smaller to larger values with increasing indices.
+In this DAG representation, the LIS corresponds to the longest path in the DAG.
+Unlike general longest path problems, the DAG derived from arrays has special properties enabling polynomial-time solutions.
+LIS is used in solving the problem of minimum deletions to make a sequence sorted.
+It is also applied in solving longest chain problems and scheduling tasks with ordering constraints.
+The number of distinct LIS paths can be computed by augmenting the DP with a count array tracking possible LIS combinations.
+Each time a longer LIS is found, the count is reset; if an equal-length LIS is found, the count is incremented.
+LIS can be generalized to finding the longest path in a partially ordered set.
+LIS length equals the minimal number of strictly increasing sequences required to partition the array.
+Inverse LIS represents the longest non-increasing subsequence, forming a dual problem.
+The longest bitonic subsequence (increasing then decreasing) uses two LIS computations — forward and backward.
+LIS is a foundational building block in multivariate dynamic programming problems.
+LIS can be solved online with segment trees or Binary Indexed Trees when data arrives incrementally.
+When applied to string sequences, LIS helps in computing common structure between character arrays.
+LIS length forms a lower bound for the edit distance between two sequences when alignment is required.
+The patience sorting algorithm used in card games is a physical simulation of the LIS computation.
+In the patience sorting analogy, each new number is placed on the leftmost pile with a greater top card or creates a new pile.
+The number of piles equals the LIS length; cards at top of each pile simulate the tails array.
+In two-dimensional LIS problems, values are first sorted by one dimension and LIS is computed over the other.
+LIS is used to solve the "Russian Doll Envelope" problem where each envelope must fit into a larger one.
+LIS length is invariant under monotonic transformations that preserve ordering.
+Variants of LIS include enforcing constraints such as maximum gap between adjacent values.
+For LIS with a maximum allowed difference d between adjacent elements, DP recurrence requires conditional checks on value differences.
+LIS forms the basis for various geometric problems, including skyline constructions and envelope packing.
+In compiler design, LIS is used in instruction scheduling for loop optimization.
+LIS also arises in bioinformatics, particularly in sequence alignment and genome rearrangement problems.
+LIS can be derived from Longest Common Subsequence (LCS) if one of the sequences is sorted.
+Mapping LIS to LCS allows leveraging matrix-based methods, though it’s suboptimal in time complexity.
+The reconstruction of the actual LIS requires backtracking using a parent array storing previous indices in the optimal path.
+For efficient backtracking in O(n log n), one must maintain index mappings along with value insertions.
+The LIS of a sequence is not necessarily unique; multiple subsequences of the same length can exist.
+To enumerate all LIS sequences, one must perform a breadth-first traversal using previously computed LIS lengths.
+When all elements are the same, the LIS is trivially of length 1.
+When the array is sorted in increasing order, LIS length equals array length.
+When strictly decreasing, the LIS length is always 1.
+LIS is monotonic under array extension only if the new element is larger than all previous values.
+In event stream analysis, LIS captures maximum non-decreasing performance trends.
+In financial modeling, LIS approximates sustained periods of growth.
+LIS helps in analyzing performance curves where only improvements are valued.
+LIS computation under modulo constraints requires hashing and careful duplicate handling.
+LIS problems with repeated values require modification to allow non-strict inequality.
+The non-strict LIS problem allows equal consecutive elements and alters recurrence.
+In parallel computing, LIS is used to analyze sequence consistency and task dependencies.
+LIS length serves as a metric of stability in machine learning sequence prediction.
+In recommender systems, LIS measures user preference coherence.
+In AI planning, LIS constraints ensure logical consistency of ordered actions.
+LIS can be modeled probabilistically to compute expected LIS in random permutations.
+The expected length of LIS in a random permutation of n elements is asymptotically 2√n.
+LIS has connections with Young tableaux and Schensted’s algorithm in combinatorics.
+The Robinson-Schensted correspondence directly relates permutations to LIS length.
+LIS is used in complexity analysis of sorting algorithms with partially sorted input.
+Adaptive sorting algorithms leverage LIS to reduce sorting cost in near-sorted arrays.
+LIS supports regression model selection by identifying monotonicity trends.
+LIS problems over graphs generalize to DAGs and require topological sorting in some variants.
+In data compression, LIS can be used to identify redundancy in growing patterns.
+LIS length is often visualized using skyline diagrams in algorithm visualization tools.
+In competitive programming, LIS is a classic problem with frequent appearance in contest platforms.
+LIS is a stepping stone to understanding more advanced DP paradigms like DP with binary search.
+LIS can be extended to k-increasing subsequences with more complex constraints.
+In sequence alignment, LIS helps maintain structural consistency with minimal edits.
+LIS combined with inversion counting aids in efficient sequence reordering.
+LIS is useful in hybrid problems like merging, chunking, or shuffling while preserving order.
+LIS computation is resilient to large-scale datasets due to logarithmic optimizations.
+LIS principles are applicable in load balancing tasks involving increasing request sequences.
+LIS underlies many problems that require structured progression with minimal violations.
+Mastery of LIS unlocks understanding of greedy, DP, and combinatorial optimization problems across domains.

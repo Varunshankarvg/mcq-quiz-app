@@ -1,0 +1,80 @@
+In the Coin Change problem, we try to make a target amount using given coin denominations.
+It is solved using dynamic programming and can be modeled as an implicit unweighted DAG.
+Each amount becomes a node in the graph from 0 to the target value.
+Edges connect nodes by adding coin values to smaller amounts.
+The graph used is unweighted because each coin use is treated equally in one variation.
+It is a DAG because we never revisit smaller amounts after reaching a bigger one.
+We can build solutions from amount 0 to the target in a bottom-up approach.
+At amount 0, we need 0 coins, which is the base case.
+From amount 0, we can reach all amounts equal to the coin values.
+Using a coin adds an edge from the current node to the next higher node.
+We update each node with the minimum number of coins needed to reach it.
+The number of coins is calculated by checking the best option among all coin values.
+The graph is traversed in a forward manner since we go from smaller to larger amounts.
+Each coin gives us multiple outgoing edges from a node.
+This leads to multiple paths to reach the same amount node in the DAG.
+Among all paths, we choose the one with the least number of steps.
+This is similar to finding the shortest path in an unweighted DAG.
+Each step in the path represents choosing a coin.
+The length of the path to a node is the number of coins used.
+If a node (amount) cannot be reached, it means there is no solution for that amount.
+For example, amount 3 cannot be made with coins [2, 4].
+A value like 0 is always reachable with 0 coins in any graph configuration.
+The graph grows linearly in size with respect to the target amount.
+For each coin, we consider all nodes that it can reach in the graph.
+We don’t revisit already calculated optimal paths due to memoization.
+This prevents redundant traversals in the DAG.
+Top-down recursive methods use the same graph model but from target to 0.
+In top-down, each function call represents moving backward in the DAG.
+We move from a higher amount to a lower one by subtracting coin values.
+Every recursive call represents an edge in the graph.
+In the unbounded version, coins can be used multiple times, leading to repeated edges.
+In bounded versions, a coin can be used only once, changing graph structure.
+The number of outgoing edges from a node equals the number of coin types.
+The target value acts like the final destination node.
+Each path to the target shows one possible combination of coins.
+The shortest path to the target node gives the minimum coins needed.
+The number of such paths gives the total combinations to form the amount.
+Counting paths is a variation where we count the number of distinct combinations.
+In that case, we add ways instead of minimizing coins.
+We use a DP array to represent node values in the implicit graph.
+Each index of the array represents a node or amount.
+The value at the index is either the minimum number of coins or number of ways.
+Initially, all nodes are unreachable except for node 0.
+We simulate the graph traversal using loops in a bottom-up method.
+When we process coin 1, we can reach all values from 1 to the target.
+With each coin, the graph gets new edges from existing reachable nodes.
+Using coin 2 adds edges from node 0 to 2, 1 to 3, etc.
+We update each reachable node only if the new path is better or adds ways.
+We always move forward in the graph, maintaining its acyclic nature.
+There are no backward edges in this problem’s graph model.
+We avoid visiting the same node multiple times by storing results.
+This storage is equivalent to visited status in normal graphs.
+Every node in the graph may be reached through multiple paths.
+For example, amount 5 may be reached as 2+3 or 1+1+3.
+In the unweighted DAG, all edges are assumed equal unless coin weights are considered.
+Coin values can act like weights when minimizing total value used.
+Graph traversal here is similar to BFS due to level-wise updates.
+Each loop corresponds to one BFS layer in some sense.
+The space complexity depends on the number of nodes, i.e., the target amount.
+Time complexity depends on number of coins and target amount.
+The graph model helps visualize transitions between states.
+The graph never contains cycles since we never subtract in bottom-up.
+In the top-down model, recursion prevents cycling by limiting choices.
+DAG ensures that our DP solution terminates without infinite loops.
+Each node update considers all edges coming into it.
+These edges represent using each coin type once.
+The recurrence relation in DP models incoming edges in the graph.
+There is no need to sort coins, as traversal doesn’t depend on order.
+All node values depend on previously calculated nodes in the DAG.
+Final answer is stored in the node equal to the target amount.
+If the value at that node is unchanged, there’s no solution.
+Coin Change can also be applied in pathfinding problems.
+The node values can represent cost, time, or steps in those problems.
+When graph size is too large, optimization using greedy won’t work here.
+Greedy may not always produce the shortest path in this DAG.
+For example, choosing the largest coin first may miss optimal solution.
+The DAG structure ensures the dynamic programming logic works.
+Understanding the graph view helps debug issues in state transitions.
+Even though the graph is not explicitly drawn, it exists conceptually.
+Viewing Coin Change as DAG traversal simplifies understanding the solution flow.
