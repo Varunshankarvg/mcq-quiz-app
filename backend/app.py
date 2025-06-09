@@ -19,7 +19,7 @@ CORS(app)
 app.config['SECRET_KEY'] = 'your_super_secret_key'  # Replace with a strong key in production
 
 # MongoDB setup
-#client = MongoClient("mongodb+srv://varun:HV@hv.o2mfi1r.mongodb.net/", tls=True, tlsAllowInvalidCertificates=True)
+#client = MongoClient("mongodblink", tls=True, tlsAllowInvalidCertificates=True)
 
 client = MongoClient(
     "mongodb+srv://hemadiksitha:HV@hema.arbgjdb.mongodb.net/?retryWrites=true&w=majority&tls=true"
